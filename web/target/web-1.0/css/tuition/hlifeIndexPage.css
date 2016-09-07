@@ -1,0 +1,229 @@
+.s-main{
+	background-color: #f4f4f4;
+	padding-bottom:30px;
+	color: #666666;
+}
+.s-main .account-banner{
+	height:32px;
+	background-color: #dedede;
+	margin-bottom: 10px;
+}
+.s-main .account-banner .banner-wrap{
+	width:1000px;
+	margin:0 auto;
+	padding-top:4px;
+}
+.s-main .account-banner .banner-txt{
+	display: inline-block;
+	width:98px;
+	height:22;
+	text-align: center;
+	border:1px solid #dedede;
+	line-height: 22px;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-right:10px;
+}
+.s-main .account-banner .banner-txt:hover{
+	background: #d1d1d1;
+    border: 1px solid #afafaf;
+    color: #ffffff;
+}
+.s-main .account-banner .cur-page{
+	background-color: #a6a6a6;
+	border-color:#858585;
+	color:#ffffff;
+	border-radius: 3px;
+}
+.s-main .account-wrap{
+	background-color: #ffffff;
+	width:1000px;
+	margin:0 auto;
+	overflow: hidden;
+	box-shadow: 0 2px 7px #C3C0C0;
+}
+.s-main .account-wrap .account-main-title{
+	height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    border-bottom:3px solid #b2cfef;
+}
+.s-main .account-wrap .no-pay-list{
+	margin-bottom:287px;
+}
+.s-main .account-wrap .login-pay-wrap .pay-list{
+	overflow: hidden;
+    border-bottom: 1px dashed #dfdfdf;
+    margin: 0 11px;
+}
+.s-main .account-wrap .login-pay-wrap .pay-item{
+	height:58px;
+	margin:6px 0;
+	line-height: 58px;
+	width:450px;
+	float:left;
+
+}
+.s-main .account-wrap .login-pay-wrap .pay-item{
+	vertical-align: middle;
+}
+.s-main .account-wrap .login-pay-wrap .icon{
+	background-image: url(../../images/tuition/icon.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.s-main .account-wrap .login-pay-wrap .pay-item .icon1{
+	background-position: 0 -123px;
+	width:42px;
+	height:33px;
+}
+.s-main .account-wrap .login-pay-wrap .pay-item .icon2{
+	background-position: -185px -123px;
+	width:21px;
+	height:36px;
+	margin-left: 25px;
+}
+.s-main .account-wrap .login-pay-wrap .pay-item .icon3{
+	background-position: -98px -123px;
+	width:25px;
+	height:34px;
+	margin-left: 18px;
+}
+
+.s-main .account-wrap .login-pay-wrap .txt-wrap{
+	display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: bold;
+    width:298px;
+    margin-left:8px;
+    height:58px;
+}
+.s-main .account-wrap .login-pay-wrap .school{
+	display: block;
+	margin-top:8px;
+}
+.s-main .account-wrap .login-pay-wrap .odd{
+	border-right:1px solid #dfdfdf;
+}
+.s-main .account-wrap .login-pay-wrap .pay-item .btn{
+	display: inline-block;
+	border:1px solid #cccccc;
+	width:80px;
+	height:30px;
+	background: #f3f3f3;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.s-main .account-wrap .login-pay-wrap .pay-item .btn:hover{
+	border:1px solid #A8A2A2;
+}
+.s-main .login-pay-wrap .pay-detail-wrap{
+	margin-top:10px;
+	background: #f7f7f7;
+	height:50px;
+	line-height: 50px;
+	padding-left:18px;
+}
+.s-main .login-pay-wrap .pay-detail-wrap .title{
+	font-size: 16px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.s-main .login-pay-wrap .pay-detail-wrap .city-cur{
+	display: inline-block;
+	width:113px;
+	height:32px;
+	border:1px solid #dfdfdf;
+	background: #fff;
+	position: relative;
+	line-height: 32px;
+	padding-left:5px;
+	margin-left:12px;
+	vertical-align: middle;
+}
+.s-main .login-pay-wrap .pay-detail-wrap .city-cur .icon4{
+	display: inline-block;
+	width:38px;
+	height:32px;
+	background-color: #f7f7f7;
+	position: absolute;
+	right:0;
+	top:0px;
+	border-left: 1px solid #dfdfdf;
+	background-image: url(../../images/tuition/city_tip.png);
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	cursor: pointer;
+
+}
+.s-main .login-pay-wrap .amounts-list{
+	border-top:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	overflow: hidden;
+	margin-bottom: 118px;
+}
+.s-main .login-pay-wrap .amounts-list ul li {
+	float:left;
+	width:175px;
+	padding-left: 74px;
+	height:170px;
+	border-right:1px solid #dfdfdf;
+}
+.s-main .login-pay-wrap .amounts-list ul .none-border {
+	border:none;
+}
+.s-main .login-pay-wrap .amounts-list ul li .icon5{
+	width: 86px;
+    height: 68px;
+    background-position: 0 0;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+.s-main .login-pay-wrap .amounts-list ul li .icon6{
+	margin-left: 27px;
+    margin-bottom: 20px;
+    width: 45px;
+    height: 58px;
+    background-position: -117px -1px;
+    margin-top: 35px;
+}
+.s-main .login-pay-wrap .amounts-list ul li .icon7{
+	width: 41px;
+    height: 65px;
+    background-position: -200px 0;
+    margin-top: 35px;
+    margin-left: 31px;
+    margin-bottom: 13px;
+}
+.s-main .login-pay-wrap .amounts-list ul li .icon8{
+	margin-left: 31px;
+    margin-bottom: 14px;
+    width: 55px;
+    height: 69px;
+    background-position: -275px 0;
+    margin-top: 30px;
+
+}
+.s-main .login-pay-wrap .amounts-list ul li .txt a{
+	display: inline-block;
+	height:30px;
+	border-radius: 3px;
+	background-color: #24a0ff;
+	color:#ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+	padding:0 28px;
+	cursor: pointer;
+}
+.s-main .login-pay-wrap .amounts-list ul li .txt a:hover{
+	background-color: #048FF8;
+}

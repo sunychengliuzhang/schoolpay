@@ -1,0 +1,409 @@
+body,p,div,h1,h2,h3,h4,h5,h6,img,
+a,input,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body{
+	font-size: 12px;
+}
+img {
+	border: none;
+}
+a {
+	text-decoration: none;
+}
+ul,
+li {
+	list-style: none;
+}
+a:active {
+	color: #ff5d00;
+}
+.huizi {
+	color: #c0c0c0;
+}
+.tishiwenzi {
+	font-size: 12px;
+	color: #C0C0C0;
+}
+/*顶栏部分*/
+.s-nav{
+	width:100%;
+}
+.s-nav-home{
+	position:fixed;
+	z-index: 500;
+}
+.s-nav .s-nav-top{
+	height:28px;
+	background-color: #383a4c;
+}
+.s-nav .s-nav-top .top-nav-wrap{
+	width:1000px;
+	margin: 0 auto;
+	height:28px;
+	line-height: 28px;
+	font-size: 12px;
+
+}
+.s-nav .s-nav-top .top-nav-wrap .top-nav-left{
+	float:left;
+}
+.s-nav .s-nav-top .top-nav-wrap .top-nav-right{
+	float:right;
+}
+.s-nav-top  a{
+	color:#fff;
+}
+.s-nav .s-nav-top .top-nav-wrap .personal{
+	margin-right:21px;
+}
+.s-nav .cur-theme{
+	color: #3584db;
+}
+.s-nav .ver-bar{
+	display: inline-block;
+    width: 1px;
+    height: 13px;
+    background-color: #8d8fa7;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+.s-nav .server-hot-number{
+	color: #ffe38f;
+	margin-left:4px;
+}
+.s-nav .server-hot{
+	margin-left:28px;
+}
+.s-nav .s-nav-bottom{
+	height:80px;
+	background-color: #f8f8f8;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	box-shadow: 0 0 11px #888;
+}
+.s-nav .wrap-nav-bottom{
+	width:1000px;
+	margin: 0 auto;
+	height:80px;
+	position:relative;
+	font-size: 16px;
+	font-weight: bold;
+}
+.s-nav .wrap-nav-bottom .logo-wrap{
+	float: left;
+    width: 290px;
+    height:80px;
+    display: table;
+}
+.logo-img-wrap{
+	display: table-cell;
+	vertical-align: middle;
+}
+.s-nav .wrap-nav-bottom  .tab-wrap{
+    height: 80px;
+    float:right;
+}
+.s-nav .tab-wrap a{
+	color: #383a4c;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    margin-right: 45px;
+    cursor:pointer;
+}
+.s-nav .tab-wrap .cur-tab{
+	color: #ff5d00;
+}
+.s-nav .tab-wrap .server-center{
+	margin-right:0;
+}
+.s-nav .s-nav-bottom .other-login-enter{
+	float:right;
+	height: 80px;
+    line-height: 80px;
+    margin-left:32px;
+    display: none;
+}
+.s-nav .s-nav-bottom .login-enter-btn{
+    font-size: 14px;
+    margin-right: 21px;
+    cursor: pointer;
+    font-weight: normal;
+}
+.s-nav .s-nav-bottom .register-enter-btn{
+	font-size: 14px;
+	font-weight: normal;
+	cursor: pointer;
+	font-weight: normal;
+}
+.s-nav .s-nav-bottom .register-enter-btn:hover{
+	color: #25a0ff;
+}
+.s-nav .s-nav-bottom .other-login-enter .enterin-btn{
+	display: inline-block;
+    width: 56px;
+    height: 30px;
+    background-color: #25a0ff;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+}
+.s-nav .s-nav-bottom .other-login-enter .enterin-btn:hover{
+	background-color: #1b81d0;
+}
+/*登陆浮层*/
+.mask-login-wrap .mask-layer{
+	position: fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:199998;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	background: #000;
+}
+.mask-login-wrap .mask-layer-con{
+	width:300px;
+	height:366px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-150px;
+	margin-left:-183px;
+	z-index: 199999;
+}
+/*弹出登陆框*/
+.mask-login-wrap .opacity-login-wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	background: #000000;
+	opacity: 0.7;
+	filter:alpha(opacity=70);
+	width:300px;
+	height:366px;
+}
+.mask-login-wrap .login-wrap{
+	position: relative;
+	font-size: 12px;
+	padding:31px 30px 25px 30px;
+}
+.mask-login-wrap .login-wrap .login-title{
+	font-size:18px;
+	color:#ffffff;
+	line-height: 24px;
+	margin-bottom: 21px;
+}
+.mask-login-wrap .mask-layer-con .mask-close-btn{
+	width: 8px;
+	height:8px;
+	position: absolute;
+	top:10px;
+	right:10px;
+	background: url(../images/head/layer_close_btn.png) no-repeat 0 0;
+	z-index: 19999;
+	cursor: pointer;
+}
+.mask-login-wrap .login-wrap .login-user-name,.mask-login-wrap .login-wrap .login-user-password,
+.mask-login-wrap .login-wrap .login-check-input,.mask-login-wrap .login-wrap .login-err-msg .err-img{
+	background: url(../images/content/login.png) no-repeat;
+}
+
+.mask-login-wrap .login-wrap .login-user-name,.mask-login-wrap .login-wrap .login-user-password{
+	width:200px;
+	height:40px;
+	border-radius: 5px;
+	padding-left:40px;
+	background-position: 0 -155px;
+	margin-bottom: 25px;
+	overflow:hidden;
+	background-color: #fff;
+
+}
+.mask-login-wrap .login-wrap .login-user-password{
+	background-position:0 -71px;
+	background-color:#fff; 
+	position:relative;
+}
+.mask-login-wrap .login-wrap  input{
+	width:170px;
+	height:20px;
+	border:0;
+	padding:0;
+	margin:0;
+	padding:10px 15px;
+}
+.mask-login-wrap .login-wrap .login-check{
+	margin-bottom: 25px;
+}
+.mask-login-wrap .check-num{
+	display: inline-block;
+	width:80px;
+	height:40px;
+	background: #fff;
+	margin-left:10px;
+}
+.mask-login-wrap .login-wrap .login-check-input,.mask-login-wrap .login-wrap .check-num{
+	display: inline-block;
+	height:40px;
+	vertical-align: middle;
+}
+.mask-login-wrap .login-wrap .login-check-input{
+	width:110px;
+	padding-left:40px;
+	background-position: -1px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.mask-login-wrap .login-wrap .login-check-input input{
+	width:110px;
+}
+.mask-login-wrap .login-wrap .login-btn{
+	display: inline-block;
+	margin-bottom: 10px;
+	width:240px;
+	height:40px;
+	background-color: #ff6600;
+	color:#fff;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.mask-login-wrap .login-wrap .login-btn:hover{
+	background-color: #ff6000;
+}
+.mask-login-wrap .login-wrap .login-err-msg{
+	width: 240px;
+    background-color: #ffeebd;
+    top: 29px;
+    left: 30px;
+    position: absolute;
+    z-index: 5;
+    padding:5px 0;
+}
+.mask-login-wrap .login-wrap .login-err-msg .err-img,.mask-login-wrap .login-wrap .login-err-msg .login-err-detail{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 16px;
+}
+.mask-login-wrap .login-wrap .login-err-msg .login-err-detail{
+	width:190px;
+}
+.mask-login-wrap .login-wrap .login-err-msg .err-img{
+	width:16px;
+	height:16px;
+	background-position: -21px -214px;
+	margin-left:9px;
+	margin-right:15px;
+}
+
+.mask-login-wrap .login-other a{
+	line-height: 20px;
+	cursor: pointer;
+}
+.mask-login-wrap .login-other .forget-password{
+	color:#fff;
+}
+.mask-login-wrap .login-other .forget-password:hover{
+	color: #dc5207;
+}
+.mask-login-wrap .login-other .free-register{
+	margin-left:108px;
+	color:#d29e0b;
+}
+.mask-login-wrap .login-other .free-register:hover{
+	color:#dc5207;
+}
+/*登录之后头部样式*/
+.s-nav-top .quit{
+	margin-left:20px;
+	cursor: pointer;
+}
+.s-nav .tab-wrap .person-tab-wrap .com-tab{
+	height: 46px;
+    line-height: 46px;
+    margin-top: 34px;
+    margin-right:0;
+    position: relative;
+}
+.s-nav .tab-wrap .person-tab-wrap .tab-top-des{
+	height: 41px;
+    line-height: 41px;
+    padding: 0 16px;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage{
+	background: #fff;
+	color: #ff5d00;
+}
+.s-nav .tab-wrap .person-tab-wrap .home-page .tab-top-bar{
+	*width: 156px;
+}
+.s-nav .tab-wrap .person-tab-wrap .speed-pay .tab-top-bar{
+	*width: 108px;
+}
+.s-nav .tab-wrap .person-tab-wrap .safe-protect .tab-top-bar{
+	*width: 140px;
+}
+.s-nav .tab-wrap .person-tab-wrap .merchants-server .tab-top-bar{
+	*width: 140px;
+}
+.s-nav .tab-wrap .person-tab-wrap .tab-top-bar{
+	height: 5px;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage .tab-top-bar{
+    position: relative;
+    height: 5px;
+    border-radius: 8px 8px 0 0;
+    background-color: #ff8a00;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage .tab-top-bar .radius{
+	position: absolute;
+	width:6px;
+	height:5px;
+	z-index: 99;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage .tab-top-bar .left-top-radius{
+	background:url(../images/personHome/nav_left_pressed.png) no-repeat 0 0;
+	left:0;
+	top:0;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage .tab-top-bar .right-top-radius{
+	background:url(../images/personHome/nav_right_pressed.png) no-repeat 0 0;
+	right:0;
+	top:0;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage .tab-top-des{
+    background-color: #ffffff;
+}
+.s-nav .tab-wrap .person-tab-wrap .curpage .tip-show{
+	position: absolute;
+    top: 46px;
+    margin-right: -8px;
+    right: 50%;
+    width: 15px;
+    height: 9px;
+    background: url(../images/personHome/tab_tip.png);
+}
+/*修改密码新增*/
+.s-nav .wrap-nav-bottom .change-password-title{
+	float: left;
+    border-left: 1px solid #dfdfdf;
+    height: 52px;
+    line-height: 52px;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999999;
+    padding-left: 20px;
+}

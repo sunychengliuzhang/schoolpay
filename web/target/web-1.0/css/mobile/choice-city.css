@@ -1,0 +1,40 @@
+body{
+	background: #ffffff;
+}
+.city .city-des{
+	background-color: #eeeff3;
+	height:.6rem;
+	line-height: .6rem;
+	color:#6e6e6e;
+	font-size: .28rem;
+	padding-left: .4rem;
+}
+.city .con-wrap{
+	padding-left: .0.5rem;
+	padding-right:.0.5rem;
+}
+.city .city-wrap{
+	font-size: .34rem;
+	background: #ffffff;
+	height: .88rem;
+	line-height: .88rem;
+	color: #2e2e2e;
+	padding-left: .1rem;
+	border-bottom: 1px solid #d0d0d0;
+}
+.city .cur-city{
+	padding-left: .4rem;
+	color: #fe6702;
+}
+.city .cur-city .city-con{
+	vertical-align: middle;
+}
+.city .cur-city .cur-icon{
+	display: inline-block;
+	margin-right: .28rem;
+	vertical-align: middle;
+	width:.34rem;
+	height:.4rem;
+	background: url(../../images/mobile/city.png) no-repeat center center;
+	background-size: 100% auto;
+}

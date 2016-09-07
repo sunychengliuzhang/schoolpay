@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+/*弹出层*/
+.tip{ width:350px; height:160px; background:#fff; position:fixed; left:40%;top:35%; z-index:999999; border:1px solid #fc8404;-moz-border-radius: 5px;/* Gecko browsers */-webkit-border-radius: 5px;/* Webkit browsers */border-radius:5px; }
+img{ border:none; border:0px;}
+.tip h3{ height:60px; line-height:60px; margin:0px 20px; font-size:20px; border-bottom:1px solid #e1b688; color:#383838; padding-left:15px;}
+.tipEssay{ padding:20px 30px 10px; line-height:28px;}
+.padding0{padding-top:0px;}
+
+.mainInput05{ margin-top:15px;}
+.mainInput05 label{ float:left; height:40px; line-height:40px; width:280px; text-align:right; padding-right:10px;  overflow:hidden;}
+.btn_addPic{  display: block;  position: relative;  width: 200px;  height: 39px;  overflow: hidden;  border:1px solid #EBEBEB;  background: none repeat scroll 0 0 #F3F3F3;  color: #999999;  cursor: pointer;  text-align: center;  }  
+.btn_addPic span{display: block;line-height: 39px;}  
+.btn_addPic em {  background:url(../images/add02.png) 0 0;  display: inline-block;width: 18px;  height: 18px;  overflow: hidden; margin: 10px 5px 10px 0;line-height: 20em; vertical-align: middle;}  
+.btn_addPic:hover em{background-position:-19px 0; color:#6CC;}  
+.filePrew {display: block;position: absolute;top: 0;left: 0;width:200px; height: 39px;font-size: 100px; /* 增大不同浏览器的可点击区域 */ opacity: 0; /* 实现的关键点 */ filter:alpha(opacity=0);/* 兼容IE */  }
+
+.cancel_button{position: absolute; right: 255px; top:20px; width: 100px; height:30px; overflow: hidden; line-height:16px; padding:0px 0px 0px 33px;background:url(../images/cancel.png) 12px 6px no-repeat #f5f7f8; color:#5d5d5d; border:1px solid #ddd; text-align:left;}
+
+.tipBtn{ display: inline-block;background: #ff6900;padding: 0px 20px;line-height: 28px; color: #fff;font-size: 14px;}
+.tipCenter{ text-align: center;margin-top:14px;}
+.tip img{display: inline-block;float: left;margin-top: 17px;}
+span#id_show_err{font-size: 16px;font-weight: 700;}

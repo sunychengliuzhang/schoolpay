@@ -1,0 +1,505 @@
+.s-main{
+	background-color: #eeeeee;
+}
+.s-main .person-home-nav{
+	background-color: #dedede;
+}
+.s-main .person-home-nav .person-nav-top{
+	width:1000px;
+	margin:0 auto;
+	height:32px;
+	padding-top:5px;
+}
+.s-main .person-home-nav .nav-title{
+	width:98px;
+	height:20px;
+	border: 1px solid #909090;
+	background-color: #ababab;
+	color:#ffffff;
+	line-height: 20px; 
+	text-align: center;
+	border-radius: 3px;
+}
+
+.s-main .person-home-nav .person-nav-bottom{
+	height: 94px;
+	overflow: hidden;
+	background:url(../images/personHome/nav_bottom_bg.jpg) no-repeat center 0;
+}
+.s-main .nav-bottom-main{
+	width:1000px;
+	margin:0 auto;
+	color: #ffffff;
+	font-size: 12px;
+	cursor: default;
+}
+.user-head-wrap{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right:18px;
+}
+
+.user-head,.icon,.account-balance .balance-icon,.bank-card .num  .bank-icon
+,.bank-card .num .balance-icon,.add-icon-wrap .add-icon,.home-con-right .item-icon,
+.home-deal-record .deal-title .all-record-link .record-icon,.home-deal-record .deal-nav-detail .detail-con-wrap .detail-icon{
+	background-image: url(../images/user/all_icon.png);
+}
+.user-head{
+	display: inline-block;
+	width:96px;
+	height:85px;
+	background-position:-889px -45px; 
+	margin-top:9px;
+}
+.user-head-wrap:hover .user-head{
+	background-position: -890px -179px;
+}
+.user-name-wrap{
+	display: inline-block;
+	color: #ffffff;
+    line-height: 24px;
+    vertical-align: middle;
+    margin-top: 16px;
+}
+.user-name-wrap .hello-user{
+	font-size: 16px;
+}
+.bind-user-msg{
+	display: inline-block;
+    margin-left: 42px;
+    margin-top: 33px;
+    vertical-align: middle;
+}
+.bind-user-msg ul li{
+	float: left;
+	margin-right:45px;
+}
+.bind-user-msg ul .bind{
+	cursor: default;
+}
+.bind-user-msg ul li span,
+.bind-user-msg ul li i{
+	vertical-align: middle;
+}
+.bind-user-msg ul li span a{
+	cursor:pointer;
+}
+.bind-user-msg ul li span a:hover{
+	text-decoration:underline;
+}
+.icon{
+	margin-right: 14px;
+	display: inline-block;
+	width:30px;
+	height:30px;
+}
+.icon-name{
+	background-position:-584px -47px;
+}
+.icon-email{
+	background-position: -584px -127px
+}
+.icon-safe-answer{
+	background-position: -584px -207px
+}
+.bind .icon-name{
+	background-position: -584px -86px;
+}
+.bind .icon-email{
+	background-position: -584px -183px;
+}
+.bind .icon-safe-answer{
+	background-position: -584px -247px;
+}
+.login-time-record{
+	vertical-align: middle;
+    margin-top: 33px;
+    display: inline-block;
+}
+.person-home-con{
+	width:1000px;
+	margin:0 auto;
+	overflow: hidden;
+	padding-top:10px;
+}
+.person-con-top{
+	overflow: hidden;
+	margin-bottom: 11px;
+}
+.person-home-con .home-con-left{
+	float:left;
+	padding:20px 15px;
+	border-radius:5px;
+	background-color: #ffffff;
+	margin-right:10px;
+}
+.person-home-con .home-con-right{
+	float:left;
+	background:#ffffff;
+	border-radius: 8px;
+}
+
+/*right*/
+.person-home-con .home-con-right .speed-enter{
+ 	height: 60px;
+    line-height: 60px;
+    border-bottom: 1px dashed #e8e8e8;
+    font-size: 12px;
+    padding-right:20px;
+}
+.home-con-right .item-icon{
+	display: inline-block; 
+	vertical-align: middle;
+}
+.home-con-right .enter1{
+	padding-left:13px;
+}
+.home-con-right .enter2{
+	padding-left:26px;
+}
+.home-con-right .enter3{
+	padding-left:28px;
+}
+.person-home-con .home-con-right .enter4{
+	padding-left:27px;
+	border:none;
+}
+.home-con-right .item-name{
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 19px;
+}
+.home-con-right .enter1 .item-icon{
+	width: 45px;
+    height: 38px;
+    background-position: -40px -291px;
+    margin-right: 13px;
+}
+.home-con-right .enter1 .item-name{
+	color:#6ae075;
+}
+.home-con-right .enter2 .item-name{
+	color:#45a2ef;
+}
+.home-con-right .enter3 .item-name{
+	color:#ffb838;
+}
+.home-con-right .enter4 .item-name{
+	color:#e57374;
+}
+.home-con-right .enter2 .item-icon{
+	width: 27px;
+    height: 37px;
+    background-position: -113px -292px;
+    margin-right:18px;
+}
+.home-con-right .enter3 .item-icon{
+	width: 21px;
+    height: 38px;
+    background-position: -180px -291px;
+    margin-right:20px;
+}
+.home-con-right .enter4 .item-icon{
+	width: 28px;
+    height: 39px;
+    background-position: -248px -291px;
+    margin-right:16px;
+}
+.home-con-right .speed-enter .object-name,.home-con-right .speed-enter .id-num{
+	width:85px;
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+	display: inline-block;
+	vertical-align: middle;
+	height: 60px;
+	margin-right: 15px;
+	color: black;
+}
+.home-con-right .speed-enter .object-name{
+	font-weight: bold;
+	width:128px;
+	margin-right:20px;
+	color: black;
+	cursor: pointer;
+}
+.home-con-right .unbind{
+	background-color: #fbfbfb;
+}
+.home-con-right .unbind .object-name{
+	font-weight: normal;
+	color:#999999;
+}
+.home-con-right .speed-enter .name{
+	display: inline-block;
+	vertical-align: middle;
+	width:35px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	margin-right:20px;
+}
+.home-con-right .speed-enter .btn{
+	display: inline-block;
+	vertical-align: middle;
+	width:72px;
+	height:24px;
+	border: 1px solid #008bf6;
+	background-color: #4397fc;
+	color: #ffffff;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+	border-radius:3px;
+	cursor: pointer;
+}
+.home-con-right .speed-enter .btn:hover{
+	background-color: #329BEC;
+}
+/*left*/
+.account-balance i,.account-balance span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.account-balance .balance-icon{
+	background-position: -314px -273px;
+	width:70px;
+	height:71px;
+	margin-right: 18px;
+}
+.home-con-left .bank-card .balance-icon{
+	background-position: -404px -273px;
+}
+.balance-des{
+	height:70px;
+}
+.balance-des .txt{
+	font-size: 14px;
+	font-weight: bold;
+}
+.balance-des .num{
+	font-size: 28px;
+	margin-top:15px;
+}
+.balance-des .detail-num{
+	color:#ff0000;
+}
+.account-balance{
+	border-bottom: 1px solid #f2f2f2;
+    width: 455px;
+    padding-bottom: 25px;
+}
+.bank-card .num .bank-icon{
+	width:16px;
+	height: 12px;
+	background-position:-932px -316px; 
+	margin-right:7px;
+}
+.bank-card .num {
+	font-size: 12px;
+	margin-top:34px;
+}
+.home-con-left .bank-card .balance-des{
+	background-position: -932px -450px;
+	margin-right: 49px;
+    width: 174px;
+}
+.home-con-left .bank-card .bank-detail-num{
+	color:#2867cb;
+	margin-right:4px;
+}
+.home-con-left .bank-card{
+	border: none;
+	padding: 0;
+	padding-top:26px;
+	margin-bottom:9px;
+}
+.home-con-left .bank-card .set-ctr{
+	vertical-align: middle;
+	color: #2867cb;
+	margin-left:10px;
+	cursor: pointer;
+}
+.add-icon-wrap{
+	display: inline-block;
+	width:142px;
+	height:68px;
+	border:1px dashed #b9d9fe;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+}
+.add-icon-wrap .add-icon{
+	display: inline-block;
+	width:31px;
+	height:31px;
+	background-position: -859px -297px;
+	margin-right:11px;
+
+}
+.add-icon-wrap .add-bank-des{
+	display: inline-block;
+	color:#a1cbfd;
+	line-height: 68px;
+	font-size: 14px;
+}
+/*bottom*/
+.home-deal-record{
+	clear: both;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.home-deal-record .deal-title .deal-left{
+	float:left;
+	font-size: 14px;
+	font-weight: bold;
+}
+.home-deal-record .deal-title{
+	height:37px;
+	padding:0 20px;
+	line-height: 37px;
+	background-color: #fff;
+}
+.home-deal-record .deal-nav{
+	height:36px;
+	padding:0 20px;
+	line-height: 36px;
+	border-bottom: 1px solid #cccccc;
+	background-color: #f3f3f3;
+}
+.home-deal-record .deal-title .all-record-link{
+	float:right;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2867cb;
+	cursor: pointer;
+}
+.home-deal-record .deal-title .all-record-link:hover{
+	color: #115BCF;
+}
+.home-deal-record .deal-title .all-record-link .record-icon{
+	background-position: -333px -394px;
+	width:16px;
+	margin-right: 10px;
+	height:16px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.home-deal-record .deal-title .all-record-link .record-des{
+	vertical-align: middle;
+
+}
+.home-deal-record .deal-nav-detail{
+	padding:0 20px;
+	text-align: left;
+	border-bottom: 1px solid #e6e6e6; 
+	cursor: default;
+}
+.home-deal-record .odd{
+	background-color: #fff;
+}
+.home-deal-record .even{
+	background-color: #fbfbfb;
+}
+.home-deal-record .deal-nav span{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	display: inline-block;
+}
+.home-deal-record .deal-nav .deal-time,.home-deal-record .deal-nav-detail .deal-time{
+	display: inline-block;
+	width:225px;
+	margin-left:50px;
+}
+.home-deal-record .deal-nav-detail span{
+	text-align: left;
+	height:50px;
+	line-height: 50px;
+}
+.home-deal-record .deal-nav .deal-money,.home-deal-record .deal-nav-detail .deal-money{
+	display: inline-block;
+	width:150px;
+}
+.home-deal-record .deal-nav .deal-type,.home-deal-record .deal-nav-detail .deal-type{
+	display: inline-block;
+	width:150px;
+}
+.home-deal-record .deal-nav .deal-beneficiary,.home-deal-record .deal-nav-detail .deal-beneficiary{
+	display: inline-block;
+	width:232px;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	vertical-align: middle;
+	cursor: default;
+	color: black;
+}
+.home-deal-record .deal-nav .deal-status,.home-deal-record .deal-nav-detail .deal-status{
+	display: inline-block;
+	width:150px;
+}
+.home-deal-record .deal-nav .deal-ctr{
+	padding-left:9px;
+}
+.home-deal-record .deal-nav .deal-ctr,.home-deal-record .deal-nav-detail .deal-ctr{
+	display: inline-block;
+	width:46px;
+}
+.home-deal-record .deal-nav-detail .deal-ctr{
+	display: inline-block;
+	width:54px;
+	color:#2867cb;
+	position: relative;
+	height:21px;
+}
+
+.home-deal-record .deal-nav-detail .detail-con-wrap {
+	width:44px;
+	height:21px;
+	position: relative;
+	padding-left:10px;
+}
+.home-deal-record .deal-nav-detail .detail-con-wrap .detail-txt{
+	margin-right:4px;
+	line-height: 24px;
+}
+.home-deal-record .deal-nav-detail .detail-con-wrap .detail-icon{
+	display: inline-block;
+	vertical-align: middle;
+	width:7px;
+	height:4px;
+	background-position: -936px -344px;
+}
+.detail-and-del{
+	position: absolute;
+	background-color: #ffffff;
+	width:54px;
+	height:44px;
+	top:-10px;
+	left:0;
+	border: 1px solid #cccccc;
+	display: none;
+}
+.del-record{
+	border-bottom: 1px solid #cccccc;
+}
+.deal-ctr .detail-and-del a{
+	width: 54px;
+    text-align: center;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.deal-ctr .detail-and-del a:hover{
+	background-color: #4397fc;
+	color:#ffffff;
+}
+.deal-success .deal-status{
+	color:#00b811;
+}
+.deal-fail .deal-status{
+	color:#ff0000;
+}

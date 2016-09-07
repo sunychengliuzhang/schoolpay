@@ -1,0 +1,817 @@
+.s-main{
+    background-color: #eeeeee;
+}
+.s-main .main-content{
+	width: 1000px;
+	margin:0 auto;
+	padding: 10px 0;
+}
+.s-main .main-content .main-wrap{
+	border-radius: 3px;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap .four-i{
+	width:28px;
+	height: 28px;
+	background-image: url(../../images/wxpay/weixin.png);
+	background-position:-2px 0px;
+}
+.s-main .main-content .main-order-detail{
+	overflow: hidden;
+	font-size: 12px;
+	color:#313131;
+	padding-top: 6px;
+    border-bottom: 3px solid #bbbbbb;
+    position: relative;
+    background-color: #eeeeee;
+    margin-bottom: 11px;
+}
+.s-main .main-content .main-order-left{
+	float:left;
+	width:400px;
+}
+.s-main .main-content .main-order-right{
+	float:right;
+	font-size: 18px;
+}
+.s-main .main-content .order-item{
+	line-height: 23px;
+}
+.s-main .main-content .order-detail-msg{
+	font-size: 14px;
+	font-weight:bold;
+}
+.s-main .main-content .order-detail-msg .school{
+	margin-right:17px;
+}
+.s-main .main-content  .order-warn-tip{
+	color:#6f6f6f;
+	margin-top: 10px;
+}
+.s-main .main-content .limit-time{
+	color:#ff8a00;
+}
+.s-main .main-content .main-order-right .order-pay-value{
+	color: #ff0000;
+}
+.s-main .main-content .main-order-right .pay-sum-wrap{
+	margin-right:31px;
+	margin-top:32px;
+	font-weight: bold;
+}
+.s-main .main-content .main-order-right .order-pay-title{
+	margin-right:3px;
+}
+.s-main .main-content .order-detail-txt{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	color:#ffffff;
+	background-color: #bbbbbb;
+	position: absolute;
+	right:31px;
+	bottom: 0;
+}
+/**/
+.s-main .main-con-bottom{
+	padding:0 15px 28px;
+	background-color:#ffffff;
+}
+.s-main .main-con-bottom .s-pay-wrap,.s-main .main-con-bottom .other-pay-method .speed-pay-wrap{
+		background: url(../../images/easypay/dashed.png) repeat-x left bottom;
+}
+.s-main .main-con-bottom .s-pay-wrap{
+	padding:20px 0 22px;
+}
+.s-main .main-con-bottom .other-pay-method {
+	overflow:hidden;
+}
+.s-main .main-con-bottom .other-pay-method li{
+	float:left;
+	margin-left:34px; 
+}
+.s-main .main-con-bottom .speed-pay-wrap li{
+	margin-bottom:19px;
+}
+.s-main .main-con-bottom .other-pay-title{
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom:21px;
+}
+.s-main .main-con-bottom .person-pay-wrap{
+	overflow: hidden;
+	margin-left:12px;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap i,.s-main .main-con-bottom .pay-method-select .dot-tip
+,.s-main .main-con-bottom .bank-play-list .person-sample i,.s-main .main-con-bottom .next-step-con .bank-detail-pay .person-sample i
+,.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .bind-other-bank .bind-icon{
+	background-image: url(../../images/easypay/paymethod.png);
+}
+.s-main .main-con-bottom .pay-method-select{
+	cursor: pointer;
+}
+.s-main .main-con-bottom .pay-method-select .dot-tip{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	vertical-align: middle;
+	background-position: -43px 0;
+	margin-right:10px;
+}
+.s-main .main-con-bottom .select .dot-tip{
+	background-position: -65px 0;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap{
+	display: inline-block;
+	width: 238px;
+	height:46px;
+	border:1px solid #dfdfdf;
+	vertical-align: middle;
+}
+.s-main .main-con-bottom .select .pay-person-wrap{
+	border-color:#0090ff 
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap span,.s-main .main-con-bottom .other-pay-method .pay-person-wrap i{
+	display: inline-block;
+	vertical-align: middle;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap i{
+	margin-right:10px;
+	margin-left:20px;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap .first-i{
+	width:25px;
+	height: 25px;
+	background-position:0 -34px;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap .second-i{
+	width:25px;
+	height: 19px;
+	background-position:0 0;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap .third-i{
+	width:28px;
+	height: 28px;
+	background-position:0 -73px;
+}
+.s-main .main-con-bottom .other-pay-method .pay-person-wrap span{
+	line-height: 46px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .pay-person-wrap .card-style{
+	position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #fff;
+    font-size: 12px;
+    width: 70px;
+    height: 46px;
+    display: inline-block;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .pay-person-wrap .card-style .blue-bg{
+	width: 60px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    background-image: none;
+    font-style: normal;
+    background-color: #738fcb;
+    color: #fff;
+    font-weight: normal;
+    margin-top: 13px;
+    border-radius: 3px;
+    text-align: center;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap{
+	margin-top:11px;
+
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .bind-bank-wrap{
+	display: inline-block;
+	width:237px;
+	height:46px;
+	border:1px dotted #dfdfdf;
+	text-align: center;
+	cursor: pointer;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .bind-other-bank .dot-tip{
+	display: inline-block;
+	width:24px;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .bind-other-bank .bind-icon{
+	display: inline-block;
+	width:16px;
+	height:16px;
+	vertical-align: middle;
+	background-position: 0 -150px;
+	margin-right: 13px;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .bind-other-bank .card-style{
+	display: inline-block;
+	vertical-align: middle;
+	height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    color:#50b3ff;
+}
+/**/
+.s-main .main-con-bottom .bank-play-list{
+	overflow: hidden;
+	padding:20px 110px 20px;
+	display: none;
+}
+.s-main .main-con-bottom .first-con{
+	display: block;
+}
+.s-main .main-con-bottom .bank-play-list .bank-list ,.s-main .main-con-bottom .next-step-con .bank-detail-pay .bank-list,
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .bank-list{
+	width:178px;
+	height:44px;
+	border:1px solid #b3c4e4;
+	background:url(../../images/easypay/bank.gif);
+	float:left;
+	margin-right:7px;
+	overflow:hidden;
+	margin-bottom: 11px;
+	cursor: pointer;
+}
+.s-main .main-con-bottom .other-pay-method .speed-pay-wrap .pay-person-wrap{
+		background:url(../../images/easypay/bank.gif);
+		background-position: -5px 4px;
+		position: relative;
+}
+.s-main .main-con-bottom .bank-play-list .icon-cashier-ICBC,
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-ICBC{
+	background-position: 5px -1004px;
+}
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CCB{
+	background-position: 5px -788px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CMB,
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CMB{
+	background-position: 5px -1291px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-ABC
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-ABC{
+	background-position: 5px -645px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-COMM
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-COMM{
+	background-position: 5px -2013px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-GDB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-GDB{
+	background-position: 5px -2156px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BOC
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BOC{
+	background-position: 5px -142px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CMBC
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CMBC{
+	background-position: 5px -716px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-HXBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-HXBANK{
+	background-position: 5px -393px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CIB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CIB{
+	background-position: 5px -105px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CEB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CEB{
+	background-position: 5px -860px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CITIC
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CITIC{
+	background-position: 5px -428px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-PSBC
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-PSBC{
+	background-position: 5px -572px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SPDB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SPDB{
+	background-position: 5px -1833px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SCB{
+	background-position: 5px -1616px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BJRCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BJRCB{
+	background-position: 5px -2119px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-ZHESHANG
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-ZHESHANG{
+	background-position: 5px -1148px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-HZB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-HZB{
+	background-position: 5px -1181px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SHBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SHBANK{
+	background-position: 5px -1220px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BOHAIB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BOHAIB{
+	background-position: 5px -1256px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-HKB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-HKB{
+	background-position: 5px -1326px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-XMBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-XMBANK{
+	background-position: 5px -1364px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CSSYBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CSSYBANK{
+	background-position: 5px -1400px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SMX
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SMX{
+	background-position: 5px -1471px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-ZRCBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-ZRCBANK{
+	background-position: 5px -1507px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-GCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-GCB{
+	background-position: 5px -1542px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-RZB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-RZB{
+	background-position: 5px -1579px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BGB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BGB{
+	background-position: 5px -1653px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-ZBCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-ZBCB{
+	background-position: 5px -1685px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-QLBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-QLBANK{
+	background-position: 5px -1723px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-TYCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-TYCB{
+	background-position: 5px -1758px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-NXBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-NXBANK{
+	background-position: 5px -1795px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-DYSSYYH
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-DYSSYYH{
+	background-position: 5px -1865px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-NJCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-NJCB{
+	background-position: 5px -1903px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-NHB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-NHB{
+	background-position: 5px -1939px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BOD
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BOD{
+	background-position: 5px -1976px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-JJBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-JJBANK{
+	background-position: 5px -2046px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-DZSBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-DZSBANK{
+	background-position: 5px -2084px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-QDCCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-QDCCB{
+	background-position: 5px -2191px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-YCSSYYH
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-YCSSYYH{
+	background-position: 5px 4px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-JSBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-JSBANK{
+	background-position: 5px -31px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-ZHUHAIB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-ZHUHAIB{
+	background-position: 5px -68px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-HSBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-HSBANK{
+	background-position: 5px -173px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-WLMQSYYH
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-WLMQSYYH{
+	background-position: 5px -210px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-NBBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-NBBANK{
+	background-position: 5px -247px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-FDB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-FDB{
+	background-position: 5px -284px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-WZCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-WZCB{
+	background-position: 5px -320px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SPABANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SPABANK{
+	background-position: 5px -356px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-TACCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-TACCB{
+	background-position: 5px -462px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CRCBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CRCBANK{
+	background-position: 5px -500px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-WHCCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-WHCCB{
+	background-position: 5px -536px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BOSZ
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BOSZ{
+	background-position: 5px -609px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SDEB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SDEB{
+	background-position: 5px -680px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SJBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SJBANK{
+	background-position: 5px -753px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SRCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SRCB{
+	background-position: 5px -824px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-HNRCC
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-HNRCC{
+	background-position: 5px -897px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-DLB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-DLB{
+	background-position: 5px -932px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SRBANK
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SRBANK{
+	background-position: 5px -968px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-BHB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-BHB{
+	background-position: 5px -1040px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-CDCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-CDCB{
+	background-position: 5px -1074px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-SHRCB
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-SHRCB{
+	background-position: 5px -1111px;
+}
+
+.s-main .main-con-bottom .bank-play-list .icon-cashier-HNXYS
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .icon-cashier-HNXYS{
+	background-position: 5px -1437px;
+}
+
+.s-main .main-con-bottom .bank-play-list .bank-list-4,.s-main .main-con-bottom .bank-play-list .bank-list-4,.s-main .main-con-bottom .bank-play-list .bank-list-12{
+	margin-right:0;
+}
+.s-main .main-con-bottom .bank-play-list .bank-list-other{
+	width: 178px;
+    height: 44px;
+    border: 1px solid #b3c4e4;   
+    float: left;
+    margin-right: 7px;
+    overflow: hidden;
+    margin-bottom: 11px;
+    cursor: pointer;
+	background-color:#d7f1ff;
+	border-color:#9dddff ;
+	color: #01a6ff;
+	text-align: center;
+	line-height:44px; 
+	font-size: 16px;
+}
+
+.s-main .main-con-bottom .bank-play-list .person-sample,.s-main .main-con-bottom .next-step-con .bank-detail-pay .person-sample{
+	display: inline-block;
+	width:18px;
+	background-color:#e0ecff;
+	height:44px;
+	float:right;
+	text-align: center;
+}
+.s-main .main-con-bottom .bank-play-list .person-sample i,.s-main .main-con-bottom .next-step-con .bank-detail-pay .person-sample i{
+	display: inline-block;
+	width:14px;
+	height:15px;
+	background-position: 0 -118px ;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.s-main .main-con-bottom .bank-play-list .person-sample span,
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .person-sample span{
+	display: inline-block;
+	height:44px;
+	vertical-align: middle;
+}
+.s-main .main-con-bottom  .next-step{
+	width:183px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #ffffff;
+	background-color:#ff8a00; 
+	font-size: 14px;
+	font-weight: bold;
+	margin:0 auto;
+	cursor: pointer;
+	display: block;
+}
+.s-main .main-con-bottom .bank-play-list .choice{
+	 border:2px solid #ffa202;
+	 width: 176px;
+     height: 42px;
+}
+
+/**/
+
+.s-main .main-con-bottom .card-password-pay{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+	padding-top:20px;
+	padding-left:186px; 
+	padding-bottom:27px;
+	display: none;
+}
+.s-main .main-con-bottom .card-password-pay .tip{
+	color: #ff8a00;
+}
+.s-main .main-con-bottom .next-step-detail{
+	background: url(../../images/easypay/dashed.png) repeat-x left bottom;
+}
+.s-main .main-con-bottom .next-step-con .login-interpay-btn{
+	display: inline-block;
+	width:180px;
+	height:34px;
+	border:1px solid #ea7900;
+	color: #ffffff;
+	line-height: 34px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #ff8a00;
+	margin-left:388px;
+	cursor: pointer;
+	margin-bottom: 19px;
+}
+.s-main .main-con-bottom .next-step-con .bank-detail-pay{
+	text-align: center;
+	margin:21px 0 44px;
+}
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .paymethod
+,.s-main .main-con-bottom .next-step-con .bank-detail-pay .paychange{
+	vertical-align: middle;
+	font-weight: 14px;
+}
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .paychange{
+	color: #40b3ff;
+	font-size: 12px;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .bank-list{
+	float: none;
+	display: inline-block;
+	margin:0;
+	margin:0 10px;
+	border:2px solid #ffa202;
+	vertical-align: middle;
+}
+.s-main .main-con-bottom .next-step-con .bank-detail-pay .person-sample i{
+}
+/*各个银行自己规定*/
+.s-main .main-con-bottom .next-step-con .bankname{
+	font-size: 16px;
+	font-weight: normal;
+	font-weight: bold;
+	margin: 24px 0 22px;
+}
+.s-main .main-con-bottom .next-step-con .bank-rule-detail{
+	margin-bottom: 17px;
+	padding-left:84px;
+}
+.s-main .main-con-bottom .next-step-con .bank-rule-other{
+	padding-left:84px;
+	margin-bottom: 43px
+}
+.s-main .main-con-bottom .next-step-con table,.s-main .main-con-bottom .next-step-con tr
+,.s-main .main-con-bottom .next-step-con td{
+	border:1px solid #dfdfdf;
+	border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+.s-main .main-con-bottom .next-step-con .first-tr-td{
+	width:224px;
+	height:80px;
+}
+.s-main .main-con-bottom .next-step-con .credit-card-td{
+	width:330px;
+	height:80px;
+/*	text-align: center;
+*/}
+.s-main .main-con-bottom .next-step-con .debit-card{
+	width:237px;
+	height:39px;
+/*	text-align: center;
+*/}
+.s-main .main-con-bottom .next-step-con .public-version,.professional-version{
+	width:117px;
+	height:37px;
+}
+.s-main .main-con-bottom .next-step-con .com-td{
+	height:40px;
+	line-height: 40px;
+}
+.s-main .main-con-bottom .next-step-con .rule-list{
+	height: 24px;
+	line-height: 24px;
+}
+.s-main .main-con-bottom .next-step-con .rule-list span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.s-main .main-con-bottom .next-step-con .rule-list-img{
+	width:8px;
+	height:8px;
+	background: url(../../images/easypay/bank-rule.png) no-repeat 0 0;
+	margin-right:10px;
+}
+.mask-layer-wrap .mask-layer{
+	position: fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:199998;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	background: #000;
+}
+.mask-layer-wrap .mask-layer-con{
+	width:520px;
+	height:275px;
+	border:4px solid #d8d8d8;
+	z-index: 199999;
+	background: #fff;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-135px;
+	margin-left:-260px;
+}
+.mask-layer-wrap .layer-title{
+	background: #383a4c;
+	color: #ffffff;
+	font-size: 16px;
+	height:40px;
+	line-height: 40px;
+	padding-left:30px;
+	position: relative;
+}
+.mask-layer-wrap .close-btn,.mask-layer-wrap .layer-con .layer-txt-img{
+	background-image: url(../../images/easypay/layer-img.png);
+}
+.mask-layer-wrap .close-btn{
+	position: absolute;
+	display: block;
+	top:12px;
+	right:24px;
+	width:16px;
+	height:16px;
+	background-position: -85px 0;
+	cursor: pointer;
+}
+.mask-layer-wrap .layer-con{
+	margin: 0 34px;
+    text-align: center;
+    margin-top: 45px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 24px;
+}
+.mask-layer-wrap .layer-con .layer-txt-img{
+	display: inline-block;
+	width:59px;
+	height:59px;
+	background-position: 0 0;
+	vertical-align: middle;
+	margin-right: 24px;
+
+}
+.mask-layer-wrap .layer-con .pay-bank-tip{
+	display: inline-block;
+	width:227px;
+	font-size: 14px;
+	line-height: 26px;
+	vertical-align: middle;
+	text-align: left;
+}
+.mask-layer-wrap .layer-btn-wrap{
+	text-align: center;
+}
+.mask-layer-wrap .layer-btn-wrap span{
+	display: inline-block;
+	background: #f3f3f3;
+	border:1px solid #cccccc;
+	text-align: center;
+	height:30px;
+	line-height: 30px;
+	padding:0 26px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+}
+.mask-layer-wrap .pay-complete-btn{
+	margin-right: 18px;
+}

@@ -1,0 +1,343 @@
+.s-main{
+    background-color: #eeeeee;
+}
+.s-main .main-content{
+	width: 1000px;
+	margin:0 auto;
+	padding: 10px 0;
+}
+.s-main .main-content .main-wrap{
+	box-shadow: 0 2px 7px #C3C0C0;
+	background-color: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	padding-bottom: 84px;
+}
+.s-main .account-banner{
+	height:32px;
+	background-color: #dedede;
+	margin-bottom: 10px;
+}
+.s-main .account-banner .banner-wrap{
+	width:1000px;
+	margin:0 auto;
+	padding-top:4px;
+}
+.s-main .account-banner .banner-txt{
+	display: inline-block;
+	width:98px;
+	height:22;
+	text-align: center;
+	border:1px solid #dedede;
+	line-height: 22px;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-right:10px;
+}
+.s-main .account-banner .banner-txt:hover{
+	background: #d1d1d1;
+    border: 1px solid #afafaf;
+    color: #ffffff;
+}
+.s-main .account-banner .cur-page{
+	background-color: #a6a6a6;
+	border-color:#858585;
+	color:#ffffff;
+	border-radius: 3px;
+}
+.s-main .main-content .main-con-title{
+	font-size: 16px;
+    font-weight: bold;
+    color: #313131;
+    line-height: 20px;
+    padding-left: 15px;
+    height: 20px;
+    padding-top: 16px;
+    margin-bottom: 11px;
+}
+.s-main .main-content .main-con-left{
+	float:left;
+	font-size: 14px;
+	padding-left:15px;
+
+}
+.s-main .main-content .main-con-right{
+	width:635px;
+	float:left;
+	font-size: 16px;
+	border: 1px solid #d7d8d9;
+	padding:4px 8px 10px 15px;
+	margin-left:10px;
+}
+.s-main .main-content .main-left-top{
+	width:253px;
+	background-color: #fff8f0;
+    border: 1px solid #ffddb4;
+    padding:17px 10px 25px 35px;
+    border-bottom: 4px solid #ffddb4;
+}
+.s-main .main-content .main-left-top span{
+	line-height: 20px;
+}
+.s-main .main-content .class-school{
+	margin-top:10px;
+}
+.s-main .main-content .class-school .common-span{
+	font-weight:bold;
+	margin-right:15px;
+}
+.s-main .main-content .city-school .common-span{
+	font-weight:normal;
+	margin-right:15px;
+}
+.s-main .main-content .main-left-bottom{
+	padding:13px 18px 23px;
+	background-color: #f9f9f9;
+	border: 1px solid #d7d8d9;
+    border-top: none;
+    position: relative;
+}
+.s-main .main-content .main-left-bottom h1{
+	font-size: 14px;
+	line-height: 20px;
+    margin-bottom: 10px;
+}
+.s-main .main-content .main-left-bottom .other-search-classyear{
+	width: 259px;
+    height: 34px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.s-main .main-content .main-left-bottom .visiblity-con{
+	display: inline-block;
+	width:197px;
+	height:32px;
+	padding:0 10px;
+	line-height: 32px;
+	border: 1px solid #dfdfdf;
+	background-color: #fff;
+}
+.s-main .main-content .main-left-bottom .setgray{
+	color:#a3a3a3;
+}
+.s-main .main-content .dot-img,.s-main .main-content .main-left-bottom .play-btn i
+,.s-main .main-content .main-left-bottom .show-pass-classyear .select-simple{
+	background: url('../../images/tuition/pay_detail24.png') no-repeat;
+}
+.s-main .main-content .main-left-bottom .play-btn{
+	display: inline-block;
+	width:40px;
+	height: 34px;
+	background-color: #ff8a00;
+	vertical-align: top;
+	text-align: center;
+	cursor: pointer;
+}
+.s-main .main-content .main-left-bottom .play-btn i{
+	display: inline-block;
+	width:14px;
+	height: 8px;
+	background-position:0px -18px;
+	vertical-align: middle;
+}
+.s-main .main-content .main-left-bottom .show-pass-classyear{
+	position: absolute;
+	top:78px;
+	left:18px;
+	width:257px;
+	background-color: #fff;
+	border:1px solid #dfdfdf;
+	border-top: none;
+	height:132px;
+	overflow: hidden;
+	padding-bottom:42px;
+	display: none;
+}
+.s-main .main-content .main-left-bottom .select-con-wrap{
+	position:absolute;
+	top:0;
+	left:0;
+	width:257px;
+}
+.s-main .main-content .main-left-bottom  .select-item{
+	border-bottom: 1px solid #dfdfdf;
+	padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.s-main .main-content .main-left-bottom .show-pass-classyear .select-simple{
+	display: inline-block;
+	width:16px;
+	height: 16px;
+	background-position: -14px -1px;
+	vertical-align: middle;
+	overflow: hidden;
+	margin-right: 15px;
+}
+.s-main .main-content .main-left-bottom .show-pass-classyear .choice .select-simple{
+	background-position: -14px -24px;
+}
+.s-main .main-content .main-left-bottom  .mousein{
+	background-color: #f2f2f2;
+}
+.s-main .main-content .main-left-bottom .select-ok,.s-main .main-content .main-left-bottom .select-cancel{
+	display: inline-block;
+	width:40px;
+	height:20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 12px;
+}
+.s-main .main-content .main-left-bottom .select-btn-wrap{
+	position:absolute;
+	width:257px;
+	left:0;
+	bottom:0;
+	text-align: center;
+	padding:10px 0;
+	background-color: #ffffff;
+	border-top: 1px solid #dfdfdf;
+}
+.s-main .main-content .main-left-bottom .slider-bar{
+	width:7px;
+	height:36px;
+	background-color: #c1c1c1;
+	position:absolute;
+	left:2px;
+	border-radius: 10px;
+}
+.s-main .main-content .main-left-bottom .select-ok{
+	color:#fff;
+	background-color: #ff8a00;
+	border:1px solid #eb8211;
+	margin-right:42px;
+}
+.s-main .main-content .main-left-bottom .select-cancel{
+	border:1px solid #cccccc;
+	text-align: center;
+	color:#313131;
+	background-color: #f3f3f3;
+}
+.s-main .main-content .main-left-bottom .select-slide-wrap{
+	width:11px;
+	height: 131px;
+	border:1px solid #dfdfdf;
+	position: absolute;
+	right:-1px;
+	top:-1px;
+	background-color: #f7f7f7;
+}
+.s-main .main-content .main-left-bottom .show-pass-classyear .class-year{
+	display: inline-block;
+	height:16px;
+	line-height: 16px;
+	font-size: 12px;
+	vertical-align: middle;
+}
+.play-btn .forvertical{
+	display: inline-block;
+	height:34px;
+	line-height: 34px;
+	vertical-align: middle;
+}
+.s-main .main-content .class-year-wrap{
+	width:240px;
+	overflow: hidden;
+	margin-top: 17px;
+    padding-left: 17px;
+}
+.s-main .main-content .class-year-wrap li{
+	width:111px;
+	float:left;
+	font-size: 12px;
+	margin-bottom:5px;
+}
+.s-main .main-content .dot-img{
+	margin-right: 8px;
+	display: inline-block;
+	width:6px;
+	height: 6px;
+	background-position: 0 0;
+	vertical-align: middle;
+}
+.s-main .main-content .classyear{
+	height:18px;
+	line-height: 18px;
+	vertical-align: middle;
+}
+/*右侧样式*/
+.s-main .main-content .main-con-right .con-right-item{
+	padding-top:11px;
+	border-bottom: 1px solid #dfdfdf;
+	position: relative;
+}
+.s-main .main-content .main-con-right .setbackgroud{
+	background-color: #f9fff5;
+}
+
+.s-main .main-content .main-con-right .item-top{
+    overflow: hidden;
+    width: 480px;
+    background: url(../../images/tuition/dashed.png) repeat-x left bottom;
+    padding-bottom: 5px;
+}
+.s-main .main-content .main-con-right .class-year{
+	float:left;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+}
+.s-main .main-content .main-con-right .class-year-pay{
+	float:right;
+}
+.s-main .main-content .main-con-right .pay-sum{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+}
+.s-main .main-content .main-con-right .pay-num{
+	font-size: 18px;
+	font-weight: bold;
+	color:#ff0101;
+}
+.s-main .main-content .main-con-right .item-detail-show{
+	padding-top: 12px;
+    font-size: 12px;
+    line-height: 20px;
+    padding-bottom: 18px;
+}
+.s-main .main-content .main-con-right .item-detail{
+	margin-right: 15px;
+}
+.s-main .main-content .main-con-right .pay-btn{
+	display: inline-block;
+	background-color: #ff8a00;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	width:72px;
+	height:28px;
+	text-align: center;
+	line-height: 28px;
+	position: absolute;
+	top:14px;
+	right:12px;
+	cursor: pointer;
+}
+.s-main .main-content .main-con-right .no-need-pay{
+	color: #a9a9a9;
+}
+.s-main .main-content .main-con-right .no-need-pay .pay-num{
+	color: #a9a9a9;
+}
+.s-main .main-content .main-con-right .no-need-pay .pay-btn{
+	background-color: #c9c9c9;
+	color: #959595;
+}
+.s-main .main-content .main-con-right .no-search-result{
+	color:#a9a9a9;
+	border-bottom: none;
+}

@@ -1,0 +1,40 @@
+body{
+	background: #ffffff;
+}
+.province .city-des{
+	background-color: #eeeff3;
+	height:.6rem;
+	line-height: .6rem;
+	color:#6e6e6e;
+	font-size: .28rem;
+	padding-left: .4rem;
+}
+.province .con-wrap{
+	padding-left: .0.5rem;
+	padding-right:.0.5rem;
+}
+.province .province-wrap{
+	font-size: .34rem;
+	background: #ffffff;
+	height: .88rem;
+	line-height: .88rem;
+	color: #2e2e2e;
+	padding-left: .1rem;
+	border-bottom: 1px solid #d0d0d0;
+}
+.province .cur-province{
+	padding-left: .4rem;
+	color: #fe6702;
+}
+.province .cur-province .province-con{
+	vertical-align: middle;
+}
+.province .cur-province .cur-icon{
+	display: inline-block;
+	margin-right: .28rem;
+	vertical-align: middle;
+	width:.34rem;
+	height:.4rem;
+	background: url(../images/mobile/city.png) no-repeat center center;
+	background-size: 100% auto;
+}

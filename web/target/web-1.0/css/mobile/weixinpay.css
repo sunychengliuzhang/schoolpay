@@ -1,0 +1,157 @@
+span{
+	display:inline-block;
+}
+body{
+	 font-size:.3rem;
+}
+label{
+	
+	float:left;
+    margin-left:.3rem;
+    text-align: left;
+    height:.41rem;
+    line-height:.41rem;
+    font-size:.3rem;
+    color:#5a5a5a;
+ 
+    vertical-align: middle;
+
+}
+.clear{
+	clear:both;
+}
+
+.name{
+	padding-left: .2rem;
+}
+.school-name{
+	padding-left: .2rem;
+	
+}
+.school{
+	height: .43rem;
+	line-height: .43rem;
+	padding-top: .1rem;
+}
+.home-num{
+	height: .43rem;
+	line-height: .43rem;
+}
+.my-name{
+	height: .43rem;
+	line-height: .43rem;
+	
+}
+
+.home-name{
+	padding-left: .2rem;
+	
+}
+.school-num{
+	padding-left: .2rem;
+	
+}
+
+.enfo-wrap{
+	height:1.6rem;
+	margin-top:0;
+	background-color: #fff;
+}
+
+.tuition-wrap{
+	background-color: #f7f7f7;
+	padding-left:.28rem;
+	margin:0 auto;
+}
+.tuition{
+	height:.76rem;
+	width:5.79rem;
+	line-height: .76rem;
+	font-size:.26rem;
+}
+.tuition-info{
+	padding-right:.2rem;
+}
+.tuition-info-list{
+	margin:0 auto;
+	padding-left:.2rem;
+	padding-right:.2rem;
+	height:3.45rem;
+	background-color: #fff;
+	border:1px solid #d0d0d0;
+	overflow: hidden;
+	margin-bottom: .2rem;
+
+
+}
+.tuition-num-wrap{
+	height:.62rem;
+	
+	margin:0 auto;
+	line-height: .62rem;
+	border-bottom:1px solid #d0d0d0;
+}
+.tuition-num-title{
+	font-size: .3rem;
+    width:21%;
+}
+.tuition-num{
+	padding-left:.05rem;
+	font-size: .3rem;
+}
+.tuition-time-wrap{
+	height:.54rem;	
+	margin:0 auto;
+	line-height: .54rem;
+}
+.tuition-time-title{
+	width:21%;
+	line-height: .3rem;
+}
+.tuition-time{
+	
+	padding-left: .05rem;
+}
+.tuition-bottom-wrap{
+	height:2.04rem;
+	
+	margin:0 auto;
+	font-size: .26rem;
+	border-bottom:1px solid #d0d0d0;
+	
+}
+.tuition-content-wrap{
+	overflow:hidden;
+}
+.tuition-content-title{
+	float:left;
+	width:21%;
+
+	line-height: .3rem;
+}
+.tuition-content{
+	float:left;
+	width:78%;	
+    padding-left: .05rem;
+	line-height: .3rem;
+}
+.total{
+	height:.78rem;
+	line-height: .78rem;
+	
+	font-size:.3rem;
+}
+.date-total{
+	float:left;
+	
+}
+.sum-total{
+	float:right;
+}
+.total-money{
+	color:#ff0000;	
+}
+
+.dollar{
+    color:#5a5a5a;
+}

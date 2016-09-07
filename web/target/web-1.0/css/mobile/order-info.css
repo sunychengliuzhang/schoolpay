@@ -1,0 +1,59 @@
+body{
+	background: #f7f7f7;
+	line-height: .24rem;
+}
+.sch-year{
+	padding:.2rem .3rem;
+	font-size: .3rem;
+}
+.sch-year .sch-con{
+	border:1px solid #cfcfcf;
+	padding:.1rem .15rem;
+	background: #ffffff;
+	margin-bottom: .13rem;
+	border-radius: .1rem;
+	position: relative;
+}
+.school-item{
+	line-height: .6rem;
+}
+.school-item .color{
+	color: #2e2e2e;
+}
+.school-item .name{
+	font-size: .24rem;
+	display: inline-block;
+	width: 1rem;
+	height: .36rem;
+	line-height: .36rem;
+	border-radius: .3rem;
+	border:1px solid #fc6b1c;
+	text-align: center;
+	color: #fc6b1c;
+	margin-right: .22rem;
+}
+.school-item .key,.sum .key{
+	margin-right: .22rem;
+}
+.school-item .value{
+	margin-right: .22rem;
+	font-size: .32rem;
+}
+.sum{
+	color: #2e2e2e;
+	font-size: .32rem;
+	margin-top:.25rem;
+	margin-bottom: .15rem;
+}
+.sum .red{
+	color: #ff0d0d;
+}
+.bg{
+	width: .1rem;
+	height: 2.63rem;
+	background:url(../img/brige.png) no-repeat center center;
+	background-size: 100% auto;
+	position: absolute;
+	right:-.06rem;
+	top:.3rem;
+}

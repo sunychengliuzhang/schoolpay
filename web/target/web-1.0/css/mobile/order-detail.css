@@ -1,0 +1,96 @@
+body{
+	background: #f7f7f7;
+	line-height: .35rem;
+}
+.order{
+	padding:.2rem .3rem;
+	font-size: .3rem;
+}
+.order .order-con{
+	border:1px solid #cfcfcf;
+	padding:0 .15rem;
+	background: #ffffff;
+}
+.order .order-title{
+	border-bottom: 1px solid #cfcfcf;
+	height: .97rem;
+	line-height: .97rem;
+	font-size: .36rem;
+}
+.order .name{
+	margin-right:.4rem;
+}
+.order .order-item{
+	margin-bottom: .2rem;
+	overflow: hidden;
+}
+.order .order-tip{
+	margin-top:.23rem;
+	margin-bottom: .2rem;
+}
+.order .order-tip-con{
+	color:#a6a6a6;
+	margin-bottom: .23rem;
+}
+.order .sum{
+	font-size: .34rem;
+	height: 1rem;
+	line-height: 1rem;
+	border-top:1px solid #cfcfcf;
+}
+.order .key{
+	float:left;
+}
+.order .sum .value{
+	color:#ff0f0f;
+}
+.order .value{
+	float:right;
+}
+.order .btn-wrap{
+	text-align: center;
+	margin-top:.45rem;
+}
+.order .btn{
+	display: inline-block;
+	width:2.6rem;
+	height: .9rem;
+	line-height: .9rem;
+	text-align: center;
+	color: #ffffff;
+	background: #24a0ff;
+	border-radius: .1rem;
+}
+/*头部样式*/
+.header{
+	height: .87rem;
+	border-bottom: 1px solid #cfcfcf;
+	line-height: .87rem;
+	padding-left: .3rem;
+	font-size: .34rem;
+}
+.header .des{
+	vertical-align: middle;
+}
+.success{
+	color: #7dce0a;
+}
+
+.icon{
+	display: inline-block;
+	width: .44rem;
+	height: .44rem;
+	vertical-align: middle;
+	margin-right: .2rem;
+}
+.success .icon{
+	background: url(../../images/wxpay/success.png) no-repeat center center;
+	background-size: 100% auto;
+}
+.failure{
+	color: #e63e32;
+}
+.failure .icon{
+	background: url(../../images/wxpay/fail.png) no-repeat center center;
+	background-size: 100% auto;
+}
