@@ -1,4 +1,4 @@
-package com.ai.school;
+package com.ai.school.util;
 
 import com.ai.paas.client.PaasContextHolder;
 import com.ai.paas.client.security.SHA1WithRSASignature;

@@ -11,7 +11,7 @@ public class QueryResVo {
     private String partnerTradeNo;//合作方交易流水号
     private Date queryTime;//查询时间
     private String retCode;//响应码
-    private String retMsg;//响应信息
+    private String retMsg;//
     private String queryRemark="";//查询备注
 	public String getPartnerId() {
 		return partnerId;

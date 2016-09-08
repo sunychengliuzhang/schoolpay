@@ -1,7 +1,6 @@
 package com.ai.school.gen;
 
 
-import com.ai.paas.client.security.SignatureUtil;
 import com.ai.paas.client.utils.SignatureTools;
 import com.ai.school.pay.SignPayVo;
 
