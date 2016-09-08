@@ -46,7 +46,6 @@ public class TulingApiProcess {
                 result = jsonObject.get("text").toString();
             }
         }
-
         return result;
 
     }
