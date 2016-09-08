@@ -13,9 +13,10 @@ import java.util.Random;
 
 /**
  * Created by chengzheng on 16/9/7.
+ * 交学费相关信息
  */
 @Controller
-public class WeixinPayAction {
+public class SchoolPayAction {
 
     private static final List<String> schools = Lists.newArrayList("亚信大学","百度大学","阿里大学","腾讯大学");
 
