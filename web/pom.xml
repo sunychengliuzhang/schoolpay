@@ -11,18 +11,40 @@
     <packaging>war</packaging>
 
     <artifactId>web</artifactId>
-    <build>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ai.hongpay.client</groupId>
+            <artifactId>hongpayClient</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
+    </dependencies>
+    <build>
+		<finalName>web</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>springview.xml</include>
+                    <include>test_private_key.pfx</include>
+
                 </includes>
             </resource>
-
         </resources>
     </build>
+
 
 
 </project>

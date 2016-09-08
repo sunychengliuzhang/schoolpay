@@ -35,6 +35,11 @@
         <artifactId>commons-fileupload</artifactId>
         <version>1.2.1</version> <!-- makesure correct version here -->
     </dependency>
+        <dependency>
+            <groupId>com.aipaas</groupId>
+            <artifactId>aiPaaS</artifactId>
+            <version>1.0.2-RELEASE</version>
+        </dependency>
 
     <dependency>
         <groupId>junit</groupId>
@@ -120,6 +125,35 @@
         <scope>provided</scope>
     </dependency>
 </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://10.1.245.213:8082/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>hongpay  snapshot repository</name>
+            <url>http://10.1.245.213:8082/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>jft</id>
+            <name>jft Maven Repository</name>
+            <url>http://10.1.245.213:8082/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+    <!-- 插件仓库-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jft</id>
+            <name>jft Maven Repository</name>
+            <url>http://10.1.245.213:8082/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 
 
