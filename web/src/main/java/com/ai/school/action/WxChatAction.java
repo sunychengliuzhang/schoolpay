@@ -58,9 +58,8 @@ public class WxChatAction {
             result = echostr;
         } else {
             //正常的微信处理流程
-            System.out.println("接收到xml消息->"+xml);
+
             result = new WechatProcess().processWechatMag(xml);
-            System.out.println("服务端返回消息--->"+result);
         }
 
         try {

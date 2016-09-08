@@ -1,4 +1,7 @@
 package com.ai.school.util;
+
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * 接收到的微信xml实体类
  * @author pamchen-1
@@ -166,6 +169,11 @@ public class ReceiveXmlEntity {
 	}
 	public void setMsgType(String msgType) {
 		MsgType = msgType;
+	}
+
+	@Override
+	public String toString() {
+		return JSONObject.toJSONString(this);
 	}
 }
 

@@ -1,12 +1,14 @@
 package com.ai.school.util;
 
+import java.io.IOException;
+
 public class WechatProcess {
 	/**
 	 * 解析处理xml、获取智能回复结果（通过图灵机器人api接口）
 	 * @param xml 接收到的微信数据
 	 * @return	最终的解析结果（xml格式数据）
 	 */
-	public String processWechatMag(String xml){
+	public String processWechatMag(String xml) throws IOException {
 		/** 解析xml数据 */
 		ReceiveXmlEntity xmlEntity = new ReceiveXmlProcess().getMsgEntity(xml);
 		
@@ -14,8 +16,10 @@ public class WechatProcess {
 		String result = "";
 		if("text".endsWith(xmlEntity.getMsgType())){
 			//接收到的是文本消息,调用图灵机器人模块进行处理
+			System.out.println("----接受到文本消息->"+xmlEntity.getContent());
 			result = new TulingApiProcess().getTulingResult(xmlEntity.getContent());
 		}else if("voice".endsWith(xmlEntity.getMsgType())){
+			System.out.println("----------->"+xmlEntity.toString());
 			//语音消息  自行处理
 //			<xml>
 //			<ToUserName><![CDATA[toUser]]></ToUserName>
