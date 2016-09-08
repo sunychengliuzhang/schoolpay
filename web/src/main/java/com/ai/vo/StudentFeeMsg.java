@@ -10,8 +10,18 @@ public class StudentFeeMsg {
     private Integer amount;
 
     private String feeRemark;
+    
+    private String stuNo;
 
-    public Integer getAmount() {
+    public String getStuNo() {
+		return stuNo;
+	}
+
+	public void setStuNo(String stuNo) {
+		this.stuNo = stuNo;
+	}
+
+	public Integer getAmount() {
         return amount;
     }
 

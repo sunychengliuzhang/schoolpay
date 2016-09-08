@@ -6,6 +6,7 @@ import com.google.common.collect.Lists;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -27,8 +28,11 @@ public class SchoolPayAction {
      */
     @RequestMapping(value = "weixinpay",produces = { "application/json;charset=UTF-8" })
     @ResponseBody
-    public String weixinPay(HttpServletRequest request){
-        return schools.toString();
+    public ModelAndView weixinPay(HttpServletRequest request){
+    	ModelAndView mView = new ModelAndView();
+    	mView.setViewName("tuitionQuery");
+    	mView.addObject("schools", schools);
+        return mView;
     }
 
     /**
@@ -43,6 +47,24 @@ public class SchoolPayAction {
         feeMsg.setAmount(1);
         feeMsg.setFeeRemark("IT培训费用   java:0.5元,C++:0.5元");
         return feeMsg.toString();
+    }
+    
+    
+    @RequestMapping(value = "tuitionInfo")
+    @ResponseBody
+    public ModelAndView tuitionInfo(HttpServletRequest request){
+    	String stuNo = request.getParameter("stuNo");
+    	String feeAmount = request.getParameter("feeAmount");
+    	String feeRemark = request.getParameter("feeRemark");
+    	String schoolName = request.getParameter("schoolName");
+    	
+    	ModelAndView mView = new ModelAndView();
+    	mView.setViewName("tuitionay");
+    	mView.addObject("styNo", stuNo);
+    	mView.addObject("feeAmount", feeAmount);
+    	mView.addObject("feeRemark", feeRemark);
+    	mView.addObject("schoolName", schoolName);
+    	return mView;
     }
 
 
