@@ -58,7 +58,6 @@ public class WxChatAction {
             result = echostr;
         } else {
             //正常的微信处理流程
-
             result = new WechatProcess().processWechatMag(xml);
         }
 
