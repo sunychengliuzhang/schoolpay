@@ -25,7 +25,6 @@ import java.util.Random;
 public class SchoolPayAction {
 
     private static final List<String> schools = Lists.newArrayList("亚信大学","百度大学","阿里大学","腾讯大学");
-
     /**
      * 返回所有的学校
      * @param request
@@ -82,7 +81,6 @@ public class SchoolPayAction {
     	return mView;
     }
 
-
     /**
      * 生成支付报文
      */
@@ -106,37 +104,5 @@ public class SchoolPayAction {
         return jsonObject.toString();
     }
 
-
-
-
-
-//    public static void main(String[] args) throws IOException {
-//        String file = WeixinPayAction.class.getClassLoader().getResource("school-fee.txt").getFile();
-//        File file1 = new File(file);
-//        System.out.println(file1);
-//        BufferedReader reader = new BufferedReader(new FileReader(file1));
-//        List<String> schools = Lists.newArrayList();
-//        String line = null;
-//        while ((line = reader.readLine()) != null){
-//            Iterable<String> splitter = Splitter.on('-').trimResults().omitEmptyStrings().split(line);
-//            Iterator<String> iterator = splitter.iterator();
-//            String name = iterator.next();
-//            String schoolName = iterator.next();
-//            String stuNo = iterator.next();
-//            System.out.println(name+","+schoolName+","+stuNo);
-//
-//        }
-
-
-
-
-//        System.out.println(resource);
-//        File file = new File("web/school-fee.txt");
-//        if(!file.exists()){
-//            file.createNewFile();
-//        }else{
-//            System.out.println("存在");
-//        }
-//    }
 
 }
