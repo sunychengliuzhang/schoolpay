@@ -34,10 +34,10 @@
 <body>
 	<div class="container">
 		<div class="page-header">
-			<h4>
+			<h5>
 				缴学费
-				<small>便捷支付</small>
-			</h4>
+				<small style="font-size: 12px;color:#BDC3C7">便捷支付</small>
+			</h5>
 		</div>
 		<div class="tuitionPay">
 			<div class="chooseSch">

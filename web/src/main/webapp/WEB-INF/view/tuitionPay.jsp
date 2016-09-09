@@ -12,32 +12,37 @@
 <link href="<%=contextPath%>/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"></head>
 <!-- Loading Flat UI -->
 <link href="<%=contextPath%>/css/flat-ui.css" rel="stylesheet">
+<style type="text/css" media="screen">
+  .panel-info{
+  border-color:#1abc9c;
+  }
+</style>
 </head>
 <body>
 	<div class="container">
 		<div class="page-header">
-			<h3>
+			<h5>
 				缴学费
-				<small>便捷支付</small>
-			</h3>
+				<small style="font-size: 12px;color:#BDC3C7">便捷支付</small>
+			</h5>
 		</div>
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<div class="panel panel-info">
-			       <div class="panel-heading">订单信息</div>
+			       <div class="panel-heading" style="background-color:#1abc9c;color:#ffffff">订单信息</div>
 			       <div class="panel-body">
 				        <ul class="list-inline">
-					        <li class="text-info">学校：</li>
+					        <li class="text-primary">学校：</li>
 					        <li>${schoolName }</li>
 					    </ul>
 					    <ul class="list-inline">
-					        <li class="text-info">学号：</li>
+					        <li class="text-primary">学号：</li>
 					        <li>${stuNo }</li>
 					    </ul>
 					    <ul class="list-inline">
-					        <li class="text-info">学费详情：</li>
+					        <li class="text-primary">学费详情：</li>
 					        <li>${feeRemark }</li>
 					    </ul>
                    </div>
@@ -51,7 +56,7 @@
 				</div>
 			</div>
 			<div class="col-sm-10 col-sm-offset-1">
-				<button type="button" class="btn btn-info btn-lg btn-block" onclick="wxpay()">微信支付</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" onclick="wxpay()">微信支付</button>
 			</div>
 		</div>
 			</div>
