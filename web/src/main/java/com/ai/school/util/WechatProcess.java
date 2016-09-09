@@ -16,35 +16,36 @@ public class WechatProcess {
     public String processWechatMag(String xml) throws IOException {
         /** 解析xml数据 */
         ReceiveXmlEntity xmlEntity = new ReceiveXmlProcess().getMsgEntity(xml);
-
-
         String result = "";
         if ("text".endsWith(xmlEntity.getMsgType())) {
-            //接收到的是文本消息,调用图灵机器人模块进行处理
-            result = new TulingApiProcess().getTulingResult(xmlEntity.getContent());
-            result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), result);
+            String content = xmlEntity.getContent();
+            System.out.println("----接受到文本消息:"+content);
+            if(content.contains(SCHOOL_FEE)){
+                //文本消息包含缴费
+                result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), PIC_URL, URL);
+                System.out.println(content+"--->交学费:"+result);
 
+            }else {
+                //接收到的是文本消息,调用图灵机器人模块进行处理
+                result = new TulingApiProcess().getTulingResult(xmlEntity.getContent());
+                result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), result);
+                System.out.println("---调用图灵机器人文本消息:"+result);
+            }
         } else if ("voice".endsWith(xmlEntity.getMsgType())) {
             //接受语音消息
             String recognition = xmlEntity.getRecognition();
-            System.out.println("-------语音识别结果:" + recognition);
-
             if (recognition.contains(SCHOOL_FEE)) {
                 //回复图文消息
                 result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), PIC_URL, URL);
-                System.out.println("发送图文消息---------"+result);
+                System.out.println("---接受语音消息交学费:"+result);
             }else{
                 result = new TulingApiProcess().getTulingResult(recognition);
                 result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), result);
-
+                System.out.println("---只能语音回复:"+result);
             }
-
         } else {
             //其他类型的消息格式
-
         }
-
-
         return result;
     }
 
