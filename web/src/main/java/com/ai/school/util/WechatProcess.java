@@ -5,8 +5,8 @@ import java.io.IOException;
 
 public class WechatProcess {
     private static final String SCHOOL_FEE = "学费";
-    private static final String PIC_URL = "";
-    private static final String URL = "";
+    private static final String PIC_URL = "http://cdn.sinacloud.net/image-001/image_school.jpg?KID=sina,19ibknuxtSIouwijakMo&Expires=1473347893&ssig=C3fzsX0mJ%2B";
+    private static final String URL = "http://sunnypay.applinzi.com/weixinpay";
     /**
      * 解析处理xml、获取智能回复结果（通过图灵机器人api接口）
      *
@@ -33,6 +33,10 @@ public class WechatProcess {
                 //回复图文消息
                 result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), PIC_URL, URL);
                 System.out.println("发送图文消息---------"+result);
+            }else{
+                result = new TulingApiProcess().getTulingResult(recognition);
+                result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), result);
+
             }
 
         } else {
