@@ -12,8 +12,18 @@ public class StudentFeeMsg {
     private String feeRemark;
     
     private String stuNo;
+    
+    private String schoolName;
 
-    public String getStuNo() {
+    public String getSchoolName() {
+		return schoolName;
+	}
+
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+
+	public String getStuNo() {
 		return stuNo;
 	}
 

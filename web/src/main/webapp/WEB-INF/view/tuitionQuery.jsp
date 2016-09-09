@@ -44,7 +44,7 @@
 				<select data-toggle="select" class="form-control select select-primary select-lg mrs mbm school" id="schoolInfo">
 				   	<option value="0">请选择学校</option>
 				    <c:forEach var="school" items="${schools }"	varStatus="status">
-				    	<option value="${status.index + 1 }">${school }</option>
+				    	<option value="${school }">${school }</option>
 			        </c:forEach>
 				</select>
 				<div class="form-group stuNo">
@@ -58,6 +58,7 @@
 		   <input type="hidden" name="amount"  id="amount" value="">
 		   <input type="hidden" name="feeRemark"  id="feeRemark"  value="">
 		   <input type="hidden" name="stuNo"  id="stuNo" value="">
+		   <input type="hidden" name="schoolName"  id="schoolName" value="">
 		</form>
 		
 	</div>
@@ -75,11 +76,11 @@
       });
       
       function tuitionPay(){
-    	  var schoolNo = $("#schoolInfo").val();
+    	  var schoolName = $("#schoolInfo").val();
     	  var stuNo = $("#stuNoInfo").val();
     	  var url = contextPath+"/getStuFee";
     	  
-    	  if(schoolNo==0){
+    	  if(schoolName=="0"){
     		  alert("请选择学校");
     		  return;
     	  }
@@ -92,23 +93,25 @@
     		   url:url,
     		   type:"post",
     		   data:{
-    			   "schoolNo":schoolNo,
+    			   "schoolName":schoolName,
     			   "stuNo":stuNo
     		   },
     		   success:function(data){
     			   var feeAmount = data.amount;
     			   var feeRemark = data.feeRemark;
-    			   var stuNo = stuNo;
+    			   var stuNo = data.stuNo;
+    			   var schoolName=data.schoolName;
     			   
     			   $("#amount").val(feeAmount);
     			   $("#feeRemark").val(feeRemark);
     			   $("#stuNo").val(stuNo);
+    			   $("#schoolName").val(schoolName);
 				   $("#generaOrderInfo").attr("action",contextPath+"/tuitionInfo");
 				   $("#generaOrderInfo").attr("method","post" );
     			   $("#generaOrderInfo").submit();  
     		   },
     		   error:function(XMLHttpRequest, textStatus, errorThrown){
-    			   
+    			   alert(errorThrown);
     		   }
     	   })
       }

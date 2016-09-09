@@ -23,13 +23,48 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<div class="tile">
-					<h3 class="tile-title tuition_title">订单信息</h3>
-					<p>100% convertable to HTML/CSS layout.</p>
-					<a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">微信支付</a>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="panel panel-info">
+			       <div class="panel-heading">订单信息</div>
+			       <div class="panel-body">
+				        <ul class="list-inline">
+					        <li class="text-info">学校：</li>
+					        <li>${schoolName }</li>
+					    </ul>
+					    <ul class="list-inline">
+					        <li class="text-info">学号：</li>
+					        <li>${stuNo }</li>
+					    </ul>
+					    <ul class="list-inline">
+					        <li class="text-info">学费详情：</li>
+					        <li>${feeRemark }</li>
+					    </ul>
+                   </div>
+                    <div class="panel-footer">
+                	    <div class="row">
+                	         <div class="col-sm-offset-10 col-sm-2">
+                	   	         <p>合计:${feeAmount }元</p>
+                	         </div>
+                	    </div>
+                    </div>
 				</div>
 			</div>
+			<div class="col-sm-10 col-sm-offset-1">
+				<button type="button" class="btn btn-info btn-lg btn-block" onclick="wxpay()">微信支付</button>
+			</div>
 		</div>
+			</div>
+		</div>
+		
+		<form id = "generaPacket">
+		   <input type="hidden" name="payPacket"  id="payPacket" value="">
+		   <input type="hidden" name="feeRemark"  id="feeRemark" value="${feeRemark }">
+		</form>
+		<form id = "wxPayForm">
+		   <input type="hidden" name="payPacket"  id="payPacket" value="">
+		   <input type="hidden" name="feeRemark"  id="feeRemark" value="${feeRemark }">
+		</form>
 </div>
 
 <!-- jQuery -->
@@ -44,6 +79,69 @@
       $('select[name="searchfield"]').select2({dropdownCssClass: 'show-select-search'});
       $('select[name="inverse-dropdown-searchfield"]').select2({dropdownCssClass: 'select-inverse-dropdown show-select-search'});
    });
+  
+  function wxpay(){
+	  
+	  $.ajax({
+		  url:contextPath+"/generateJftPayPacket",
+		  type:'POST',
+		  async:false,
+		  data:{},
+		  success:function(data){
+			  alert(data.success);
+			  if(data.success=="success"){
+				  $("#payPacket").val(data.signMsg);
+				  launchPay1();
+			  }else{
+				  alert(data.errorMsg);
+			  }
+		  },
+		  error:function(error){
+			  alert(error);
+		  }
+	  })
+	  
+  }
+  
+     //通过jsonP进行跨域请求
+	function launchPay1(){
+		var feeRemark = $("#feeRemark").val();
+		var signStr = $("#payPacket").val();
+		var url = "";
+		var data = null;
+		$.ajax({
+			url : "http://121.31.32.100:8099/aipay_web/wxPay.do",
+			type : 'POST',
+			async : false,
+			dataType:'script',
+		    data : {
+				billMsg : feeRemark,
+				requestPacket : signStr
+			}, 
+			success : function(data) {
+              //这里的调用还存在一些问题
+			},
+			error : function(XMLHttpRequest, textStatus, errorThrown) {
+				alert("error");
+			}
+		});
+	}
+     
+    //jsonp的回调函数 
+	function callback(data){
+		alert("success but error1");
+	    if (data.success == "success") {
+			alert(data.actionUrl);
+		    $("#wxPayForm").attr("action", data.actionUrl);
+		    $("#wxPayForm").submit();
+		} else {
+			$("#wxBtn").attr("disabled", false);
+			$("#fullChanelBtn").attr("disabled", false);
+			var errorMsg = data.errorMsg;
+			$.mask(returnMess(errorMsg));
+		} 
+	}  
+  
 </script>
 
 
