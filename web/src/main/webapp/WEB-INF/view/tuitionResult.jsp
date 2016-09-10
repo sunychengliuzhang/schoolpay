@@ -5,6 +5,8 @@
 <%@ include file="header.jsp"%>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 <title>缴学费结果</title>
  <!-- Bootstrap CSS -->
 	<link href="<%=contextPath%>/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"></head>
@@ -35,13 +37,13 @@
 					    </ul>
 					    <ul class="list-inline">
 					        <li class="text-info">学费详情：</li>
-					        <li>${billMsg }</li>
+					        <li>${feeRemark }</li>
 					    </ul>
                    </div>
                     <div class="panel-footer">
                 	    <div class="row">
                 	         <div class="col-sm-offset-10 col-sm-2">
-                	   	         <p>合计:${chargeAmountName }元</p>
+                	   	         <p>合计:${amount }元</p>
                 	         </div>
                 	    </div>
                     </div>

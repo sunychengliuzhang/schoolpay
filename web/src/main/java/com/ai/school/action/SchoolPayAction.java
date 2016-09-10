@@ -165,14 +165,13 @@ public class SchoolPayAction {
 		String billMsg = request.getParameter("billMsg");
 		String chargeAmountName = request.getParameter("chargeAmountName");
 
-		mView.addObject("orderId",tradeId);
-		mView.addObject("billMsg", billMsg);
-		mView.addObject("chargeAmountName", chargeAmountName);
-		
+	
 		StudentFeeMsg feeMsg = (StudentFeeMsg)request.getSession().getAttribute("feeMsg");
 		if (!MatchUtil.isEmpty(feeMsg)) {
 			mView.addObject("school", feeMsg.getSchoolName());
 			mView.addObject("stuNo",feeMsg.getStuNo());
+			mView.addObject("amount", feeMsg.getAmount());
+			mView.addObject("feeRemark", feeMsg.getFeeRemark());
 		}
 		
 		mView.setViewName("tuitionResult");
