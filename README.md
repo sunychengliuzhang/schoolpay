@@ -1,2 +1,4 @@
 # schoolpay
-It is an application for tuition
+git clone https://github.com/sunychengliuzhang/schoolpay.git
+mvn install 
+
