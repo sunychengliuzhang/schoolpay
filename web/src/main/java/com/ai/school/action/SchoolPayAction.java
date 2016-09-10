@@ -3,7 +3,7 @@ package com.ai.school.action;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +18,18 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpException;
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+import org.apache.commons.httpclient.NameValuePair;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
+import org.apache.commons.httpclient.params.HttpMethodParams;
+import org.apache.commons.httpclient.protocol.Protocol;
+import org.apache.http.protocol.HTTP;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,6 +38,15 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ai.school.util.GeneratePayMsg;
 import com.ai.vo.StudentFeeMsg;
 import com.google.common.collect.Lists;
+import com.ai.paas.client.PaasContextHolder;
+import com.ai.paas.client.http.HttpClientManager;
+import com.ai.school.util.GeneratePayMsg;
+import com.ai.school.util.MatchUtil;
+import com.ai.school.util.MySecureProtocolSocketFactory;
+import com.ai.vo.StudentFeeMsg;
+import com.google.common.collect.Lists;
+import net.sf.json.JSONObject;
+
 
 /**
  * Created by chengzheng on 16/9/7.
@@ -36,6 +57,7 @@ public class SchoolPayAction {
 
     private static final List<String> schools = Lists.newArrayList("亚信大学","百度大学","阿里大学","腾讯大学");
     public static final String HTTP_PAY_URL = "http://121.31.32.100:8099/aipay_web/wxPay.do";
+	static final String WX_PACKAGE_URL = "https://121.31.32.100:8443/aipay_web/wxPay.do";
 
     /**
      * 返回所有的学校
@@ -113,6 +135,76 @@ public class SchoolPayAction {
 			return jsonObject.toString();
 		}
         return  jsonStr;
+    }
+    
+    @RequestMapping(value = "/queryWxTuitionPayPackage", produces = { "application/json;charset=UTF-8" })
+	@ResponseBody
+	public String queryWxTuitionPayPackage(HttpServletRequest request, HttpServletResponse response) {
+		
+		JSONObject resultJson = new JSONObject();
+		String urlStr = WX_PACKAGE_URL;
+		String billMsg = request.getParameter("feeRemark");
+		String requestPacket = request.getParameter("signStr");
+		
+		PostMethod postMethod;
+		postMethod = new PostMethod(urlStr);
+		JSONObject jsonObj = new JSONObject();
+		jsonObj.put("billMsg", billMsg);
+		jsonObj.put("requestPacket", requestPacket);
+		String body = jsonObj.toString();
+		System.out.println("====body=====:" + body);
+		postMethod.setRequestBody(body);
+		NameValuePair nameValuePair = new NameValuePair();
+		nameValuePair.setName("billMsg");
+		nameValuePair.setValue(billMsg);
+		NameValuePair nameValuePair1 = new NameValuePair();
+		nameValuePair1.setName("requestPacket");
+		nameValuePair1.setValue(requestPacket);
+		postMethod.addParameter(nameValuePair);
+		postMethod.addParameter(nameValuePair1);
+
+		Protocol myhttps = new Protocol("https",new MySecureProtocolSocketFactory(), 443);
+		Protocol.registerProtocol("https", myhttps);
+        HttpClient httpClient = this.getHttpClient();
+		try {
+			int statusCode = httpClient.executeMethod(postMethod);
+			// 获取服务器端返回的状态码和输入流，将输入流转换成字符串
+			if (statusCode != HttpStatus.SC_OK) {
+				resultJson.put("code", "-1");
+				resultJson.put("error:", "访问失败");
+			}else{
+				String strResp = postMethod.getResponseBodyAsString();
+				resultJson = JSONObject.fromObject(strResp);
+			}
+		} catch (HttpException e) {
+			e.printStackTrace();
+			resultJson.put("code", "-1");
+			resultJson.put("error:", "访问失败");
+		} catch (IOException e) {
+			e.printStackTrace();
+			resultJson.put("code", "-1");
+			resultJson.put("error:", "连接访问失败");
+		}
+		return resultJson.toString();
+	}
+    
+    //获取httpClient对象
+    private HttpClient getHttpClient(){
+    	MultiThreadedHttpConnectionManager httpConnectionManager = new MultiThreadedHttpConnectionManager();
+		HttpConnectionManagerParams params = httpConnectionManager.getParams();
+        params.setConnectionTimeout(5000); 
+        params.setSoTimeout(18000); 
+        params.setDefaultMaxConnectionsPerHost(30); 
+        params.setMaxTotalConnections(30); 
+        params.setStaleCheckingEnabled(true);
+        HttpClient httpClient = new HttpClient(httpConnectionManager);
+		httpClient.getParams().setParameter(
+				HttpMethodParams.HTTP_CONTENT_CHARSET, "GBK");
+		httpClient.getParams().setParameter(HTTP.CONTENT_ENCODING, "GBK");
+		httpClient.getParams().setParameter(HTTP.CHARSET_PARAM, "GBK");
+		httpClient.getParams().setParameter(HTTP.DEFAULT_PROTOCOL_CHARSET,"GBK");
+		
+		return httpClient;
     }
 
 

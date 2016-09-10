@@ -13,6 +13,7 @@
 	<link href="<%=contextPath%>/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"></head>
 	<!-- Loading Flat UI -->
 	<link href="<%=contextPath%>/css/flat-ui.css" rel="stylesheet">
+	<link href="<%=contextPath%>/css/tuitionCounsel.css" rel="stylesheet">
 	<style type="text/css" media="screen">
 	.chooseSch{
 		padding-left: 5%;
@@ -32,11 +33,12 @@
 	
 </head>
 <body>
+<%@ include file="tuitionCounsel.jsp"%>
 	<div class="container">
-		<div class="page-header">
+		<div class="page-header" style="margin-top:30px">
 			<h5>
 				缴学费
-				<small style="font-size: 12px;color:#BDC3C7">便捷支付</small>
+				<small style="font-size: 14px;color:#BDC3C7">便捷支付</small>
 			</h5>
 		</div>
 		<div class="tuitionPay">
@@ -67,10 +69,10 @@
 <!-- Bootstrap JavaScript -->
 <script src="<%=contextPath%>/js/flat-ui.min.js"></script>
 <script src="<%=contextPath%>/assets/js/application.js"></script>
+<script src="<%=contextPath%>/js/tuitionCounsel.js">
 <script>
       $(document).ready(function(){
         $('select[name="inverse-dropdown"], select[name="inverse-dropdown-optgroup"], select[name="inverse-dropdown-disabled"]').select2({dropdownCssClass: 'select-inverse-dropdown'});
-
         $('select[name="searchfield"]').select2({dropdownCssClass: 'show-select-search'});
         $('select[name="inverse-dropdown-searchfield"]').select2({dropdownCssClass: 'select-inverse-dropdown show-select-search'});
       });
