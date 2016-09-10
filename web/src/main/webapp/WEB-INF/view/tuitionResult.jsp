@@ -17,10 +17,10 @@
 <body>
 <div class="container">
 		<div class="page-header" style="margin-top:30px">
-			<h3>
+			<h5>
 				缴学费
 				<small  style="font-size: 14px;color:#BDC3C7">便捷支付</small>
-			</h3>
+			</h5>
 		</div>
 		
 	<div class="row">
