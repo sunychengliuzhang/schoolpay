@@ -117,8 +117,7 @@
     			   alert(errorThrown);
     		   }
     	   })
-      }
-      
+     }
 </script>
 </body>
 </html>
