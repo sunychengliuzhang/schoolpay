@@ -9,6 +9,7 @@ public class WechatProcess {
     private static final String SCHOOL_FEE = "学费";
     private static final String PIC_URL = "http://cdn.sinacloud.net/image-001/%E5%BC%80%E5%AD%A6%E5%95%A6.jpg?KID=sina,19ibknuxtSIouwijakMo&Expires=1473543763&ssig=wTddgakM7F";
     private static final String URL = "http://schoolpay.team8.app.dataos.io/web/weixinpay";
+    private static final String pic_url = "http://schoolpay.team8.app.dataos.io/web/images/tuition.png";
     /**
      * 解析处理xml、获取智能回复结果（通过图灵机器人api接口）
      *
@@ -34,7 +35,7 @@ public class WechatProcess {
             String recognition = xmlEntity.getRecognition();
             if (recognition.contains(SCHOOL_FEE)) {
                 //回复图文消息
-                result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), PIC_URL, URL);
+                result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), pic_url, URL);
             }else{
                 //接收到的是文本消息,调用图灵机器人模块进行处理
                 xmlEntity.setContent(recognition);
