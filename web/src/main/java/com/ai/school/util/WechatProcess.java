@@ -72,5 +72,16 @@ public class WechatProcess {
         }
         return result;
     }
+    public String tulingResultStr(String originStr)throws IOException{
+        JSONObject tulingResult = new TulingApiProcess().getTulingResult(originStr);
+        String code = tulingResult.get("code").toString();
+        String result = "";
+        if("100000".equals(code)){
+            //文本类消息
+            return  tulingResult.get("text").toString();
+        }
+        return result;
+
+    }
 
 }

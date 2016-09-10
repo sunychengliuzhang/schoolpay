@@ -34,6 +34,12 @@ public class WxChatAction {
         out.close();
         out = null;
     }
+    @RequestMapping(value = "dealCusMsg", produces = {"application/json;charset=UTF-8"})
+    @ResponseBody
+    public String dealCusMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String textMsg = request.getParameter("textMsg");
+        return new WechatProcess().tulingResultStr(textMsg);
+    }
 
     @RequestMapping(value = "dealWxMsg",produces = {"application/json;charset=UTF-8"})
     @ResponseBody

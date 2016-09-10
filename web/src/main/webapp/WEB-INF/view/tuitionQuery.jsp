@@ -69,12 +69,13 @@
 <!-- Bootstrap JavaScript -->
 <script src="<%=contextPath%>/js/flat-ui.min.js"></script>
 <script src="<%=contextPath%>/assets/js/application.js"></script>
-<script src="<%=contextPath%>/js/tuitionCounsel.js">
+<script src="<%=contextPath%>/js/tuitionCounsel.js"></script>
 <script>
       $(document).ready(function(){
         $('select[name="inverse-dropdown"], select[name="inverse-dropdown-optgroup"], select[name="inverse-dropdown-disabled"]').select2({dropdownCssClass: 'select-inverse-dropdown'});
         $('select[name="searchfield"]').select2({dropdownCssClass: 'show-select-search'});
         $('select[name="inverse-dropdown-searchfield"]').select2({dropdownCssClass: 'select-inverse-dropdown show-select-search'});
+
       });
       
       function tuitionPay(){
