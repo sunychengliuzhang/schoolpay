@@ -8,6 +8,9 @@
 		<input type="text" name="counsel_input" id="counsel_input" class="form-control input-sm" value="">
        <button type="button" class="btn btn-xs btn-default"style="margin-top: 1px" onclick="sendCounsel()">发送</button>
 	</div>
+	<div class="counselAnswer" style="width:0;height: auto;margin-top: 40px">
+	    <p class="text-primary" id="answerInfo" style="font-size:12px"></p>
+    </div>
 </div>
 <!-- <script src="../js/jquery-1.11.3.js"></script>
 <script src="../js/bootstrap.min.js"></script> -->

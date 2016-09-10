@@ -14,6 +14,8 @@ $(function(){
 				width: '0px',
 				opacity: '0'},"slow",function(){
 					isClick = false;
+					$("#answerInfo").text("");
+		 			$("#counsel_input").val("");
 				});
 			slide_tip.animate({right: '0px'}, "slow");
 			$(".counsel").animate({opacity: '0'},"slow");
@@ -29,16 +31,16 @@ $(function(){
 		}
 	});
 
-	// // 页面滚动的同时，悬浮框也跟着滚动
-	$(window).on('scroll',function(){scro();});
-	$(window).onload = scro();
-	function scro(){
-		var offsetTop = defaultTop + $(window).scrollTop()+'px';
-		thisBox.animate({top:offsetTop},
-		{	duration: 600,	//滑动速度
-	     	queue: false    //此动画将不进入动画队列
-	     });
-	}
+//	// // 页面滚动的同时，悬浮框也跟着滚动  手机端页面暂时不需要滚动
+//	$(window).on('scroll',function(){scro();});
+//	$(window).onload = scro();
+//	function scro(){
+//		var offsetTop = defaultTop + $(window).scrollTop()+'px';
+//		thisBox.animate({top:offsetTop},
+//		{	duration: 600,	//滑动速度
+//	     	queue: false    //此动画将不进入动画队列
+//	     });
+//	}
 });
 
  function sendCounsel(){
@@ -50,7 +52,12 @@ $(function(){
  			textMsg:counsel
  		},
  		success:function(data){
- 			alert(data);
+ 			$("#counsel_input").val("");
+ 			$("#answerInfo").text(data.textResult);
+ 		    $(".counselAnswer").animate({
+ 		    	width: '90%'},
+ 		    	"slow");
+ 			
  		},
  		error:function(error){
  			alert(error);
