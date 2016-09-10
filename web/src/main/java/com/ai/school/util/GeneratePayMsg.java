@@ -36,7 +36,7 @@ public class GeneratePayMsg {
         signPayVo.setTotalAmount(1);
         signPayVo.setTotalRecord(1);
         String returnUrl ="";
-        returnUrl = "http://111.200.33.66:8080/jft-accept-web/payAction/jftPayResult.do?tradeId="+ orderCode;
+        returnUrl = "http://schoolpay.team8.app.dataos.io/web/tuitionResult?tradeId="+ orderCode;
 
         signPayVo.setReturnUrl(returnUrl);
         signPayVo.setNotifyUrl("http://baidu.com");

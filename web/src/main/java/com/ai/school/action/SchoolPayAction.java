@@ -180,7 +180,8 @@ public class SchoolPayAction {
 		if("0010".equals(returnCode)){
 			mView.setViewName("tuitionInfo");
 			mView.addObject("errorMsg","支付取消");
-		} else if ("009".equals(returnCode)) {// 支付失败
+		}
+        else if ("009".equals(returnCode)) {// 支付失败
 			mView.addObject("errorMsg","支付失败");
 		} else if ("00".equals(returnCode)) { // 支付成功
 			mView.addObject("errorMsg","支付成功");
