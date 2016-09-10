@@ -43,5 +43,17 @@ $(function(){
 
  function sendCounsel(){
  	var counsel = $("#counsel_input").val();
-     alert(counsel);
+ 	$.ajax({
+ 		url:contextPath+"/dealCusMsg",
+ 		type:"POST",
+ 		data:{
+ 			textMsg:counsel
+ 		},
+ 		success:function(data){
+ 			alert(data);
+ 		},
+ 		error:function(error){
+ 			alert(error);
+ 		}
+ 	})
  }
