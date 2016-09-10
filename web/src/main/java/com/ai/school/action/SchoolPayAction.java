@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
+import java.util.List;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,6 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
-import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
 import org.apache.commons.httpclient.params.HttpMethodParams;
@@ -45,7 +45,6 @@ import com.ai.school.util.MatchUtil;
 import com.ai.school.util.MySecureProtocolSocketFactory;
 import com.ai.vo.StudentFeeMsg;
 import com.google.common.collect.Lists;
-import net.sf.json.JSONObject;
 
 
 /**
@@ -122,7 +121,7 @@ public class SchoolPayAction {
     @ResponseBody
     public String generateJftPayPacket(HttpServletRequest request) throws Exception {
     	
-        JSONObject jsonObject = new JSONObject();
+        net.sf.json.JSONObject jsonObject = new net.sf.json.JSONObject();
         Long orderCode = new Random().nextLong();
         GeneratePayMsg generatePayMsg  = new GeneratePayMsg();
         String signMsg = generatePayMsg.generateJftPayPacket(orderCode);
@@ -137,57 +136,57 @@ public class SchoolPayAction {
         return  jsonStr;
     }
     
-    @RequestMapping(value = "/queryWxTuitionPayPackage", produces = { "application/json;charset=UTF-8" })
-	@ResponseBody
-	public String queryWxTuitionPayPackage(HttpServletRequest request, HttpServletResponse response) {
-		
-		JSONObject resultJson = new JSONObject();
-		String urlStr = WX_PACKAGE_URL;
-		String billMsg = request.getParameter("feeRemark");
-		String requestPacket = request.getParameter("signStr");
-		
-		PostMethod postMethod;
-		postMethod = new PostMethod(urlStr);
-		JSONObject jsonObj = new JSONObject();
-		jsonObj.put("billMsg", billMsg);
-		jsonObj.put("requestPacket", requestPacket);
-		String body = jsonObj.toString();
-		System.out.println("====body=====:" + body);
-		postMethod.setRequestBody(body);
-		NameValuePair nameValuePair = new NameValuePair();
-		nameValuePair.setName("billMsg");
-		nameValuePair.setValue(billMsg);
-		NameValuePair nameValuePair1 = new NameValuePair();
-		nameValuePair1.setName("requestPacket");
-		nameValuePair1.setValue(requestPacket);
-		postMethod.addParameter(nameValuePair);
-		postMethod.addParameter(nameValuePair1);
-
-		Protocol myhttps = new Protocol("https",new MySecureProtocolSocketFactory(), 443);
-		Protocol.registerProtocol("https", myhttps);
-        HttpClient httpClient = this.getHttpClient();
-		try {
-			int statusCode = httpClient.executeMethod(postMethod);
-			// 获取服务器端返回的状态码和输入流，将输入流转换成字符串
-			if (statusCode != HttpStatus.SC_OK) {
-				resultJson.put("code", "-1");
-				resultJson.put("error:", "访问失败");
-			}else{
-				String strResp = postMethod.getResponseBodyAsString();
-				resultJson = JSONObject.fromObject(strResp);
-			}
-		} catch (HttpException e) {
-			e.printStackTrace();
-			resultJson.put("code", "-1");
-			resultJson.put("error:", "访问失败");
-		} catch (IOException e) {
-			e.printStackTrace();
-			resultJson.put("code", "-1");
-			resultJson.put("error:", "连接访问失败");
-		}
-		return resultJson.toString();
-	}
-    
+//    @RequestMapping(value = "/queryWxTuitionPayPackage", produces = { "application/json;charset=UTF-8" })
+//	@ResponseBody
+//	public String queryWxTuitionPayPackage(HttpServletRequest request, HttpServletResponse response) {
+//
+//		org.json.JSONObject resultJson = new org.json.JSONObject();
+//		String urlStr = WX_PACKAGE_URL;
+//		String billMsg = request.getParameter("feeRemark");
+//		String requestPacket = request.getParameter("signStr");
+//
+//		PostMethod postMethod;
+//		postMethod = new PostMethod(urlStr);
+//		org.json.JSONObject jsonObj = new org.json.JSONObject();
+//		jsonObj.put("billMsg", billMsg);
+//		jsonObj.put("requestPacket", requestPacket);
+//		String body = jsonObj.toString();
+//		System.out.println("====body=====:" + body);
+//		postMethod.setRequestBody(body);
+//		org.apache.http.NameValuePair nameValuePair = new org.apache.http.NameValuePair();
+//		nameValuePair.setName("billMsg");
+//		nameValuePair.setValue(billMsg);
+//		org.apache.http.NameValuePair nameValuePair1 = new NameValuePair();
+//		nameValuePair1.setName("requestPacket");
+//		nameValuePair1.setValue(requestPacket);
+//		postMethod.addParameter(nameValuePair);
+//		postMethod.addParameter(nameValuePair1);
+//
+//		Protocol myhttps = new Protocol("https",new MySecureProtocolSocketFactory(), 443);
+//		Protocol.registerProtocol("https", myhttps);
+//        HttpClient httpClient = this.getHttpClient();
+//		try {
+//			int statusCode = httpClient.executeMethod(postMethod);
+//			// 获取服务器端返回的状态码和输入流，将输入流转换成字符串
+//			if (statusCode != HttpStatus.SC_OK) {
+//				resultJson.put("code", "-1");
+//				resultJson.put("error:", "访问失败");
+//			}else{
+//				String strResp = postMethod.getResponseBodyAsString();
+//				resultJson = JSONObject.fromObject(strResp);
+//			}
+//		} catch (HttpException e) {
+//			e.printStackTrace();
+//			resultJson.put("code", "-1");
+//			resultJson.put("error:", "访问失败");
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//			resultJson.put("code", "-1");
+//			resultJson.put("error:", "连接访问失败");
+//		}
+//		return resultJson.toString();
+//	}
+//
     //获取httpClient对象
     private HttpClient getHttpClient(){
     	MultiThreadedHttpConnectionManager httpConnectionManager = new MultiThreadedHttpConnectionManager();
