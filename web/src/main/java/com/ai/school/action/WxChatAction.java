@@ -2,6 +2,7 @@ package com.ai.school.action;
 
 import com.ai.school.util.SignUtil;
 import com.ai.school.util.WechatProcess;
+import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,7 +39,10 @@ public class WxChatAction {
     @ResponseBody
     public String dealCusMsg(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String textMsg = request.getParameter("textMsg");
-        return new WechatProcess().tulingResultStr(textMsg);
+        JSONObject jsonObject = new JSONObject();
+        String result = new WechatProcess().tulingResultStr(textMsg);
+        jsonObject.put("textResult",result);
+        return jsonObject.toString();
     }
 
     @RequestMapping(value = "dealWxMsg",produces = {"application/json;charset=UTF-8"})
