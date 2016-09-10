@@ -1,6 +1,8 @@
 package com.ai.school.util;
 
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 
 public class WechatProcess {
@@ -19,17 +21,13 @@ public class WechatProcess {
         String result = "";
         if ("text".endsWith(xmlEntity.getMsgType())) {
             String content = xmlEntity.getContent();
-            System.out.println("----接受到文本消息:"+content);
             if(content.contains(SCHOOL_FEE)){
                 //文本消息包含缴费
                 result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), PIC_URL, URL);
-                System.out.println(content+"--->交学费:"+result);
 
             }else {
                 //接收到的是文本消息,调用图灵机器人模块进行处理
-                result = new TulingApiProcess().getTulingResult(xmlEntity.getContent());
-                result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), result);
-                System.out.println("---调用图灵机器人文本消息:"+result);
+                result = tulingResult(xmlEntity);
             }
         } else if ("voice".endsWith(xmlEntity.getMsgType())) {
             //接受语音消息
@@ -37,14 +35,40 @@ public class WechatProcess {
             if (recognition.contains(SCHOOL_FEE)) {
                 //回复图文消息
                 result = new FormatXmlProcess().formatImageTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), PIC_URL, URL);
-                System.out.println("---接受语音消息交学费:"+result);
             }else{
-                result = new TulingApiProcess().getTulingResult(recognition);
-                result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), result);
-                System.out.println("---只能语音回复:"+result);
+                //接收到的是文本消息,调用图灵机器人模块进行处理
+                xmlEntity.setContent(recognition);
+                result = tulingResult(xmlEntity);
             }
         } else {
-            //其他类型的消息格式
+            //其他类型的消息格式  目前仅支持语音和文本类型的数据
+        }
+        return result;
+    }
+
+    private String tulingResult(ReceiveXmlEntity xmlEntity) throws IOException {
+        String result = "";
+        JSONObject tulingResult = new TulingApiProcess().getTulingResult(xmlEntity.getContent());
+        String code = tulingResult.get("code").toString();
+        if("100000".equals(code)){
+            //文本类消息
+            result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), tulingResult.get("text").toString());
+
+        }else if("200000".equals(code)){
+            //图片类消息 url相关类信息
+            String text = tulingResult.get("text").toString();
+            String url = tulingResult.get("url").toString();
+            result = new FormatXmlProcess().formatTextXmlAnswer(xmlEntity.getFromUserName(), xmlEntity.getToUserName(), text+":  "+url);
+
+        }else if("302000".equals(code)){
+            //新闻类消息
+
+        }else if("313000".equals(code)){
+            //歌曲
+
+
+        }else if("314000".equals(code)){
+            //背诵诗歌
         }
         return result;
     }

@@ -57,13 +57,15 @@
 			</div>
 		</div>
 		
-		<form id = "generaPacket">
-		   <input type="hidden" name="payPacket"  id="payPacket" value="">
-		   <input type="hidden" name="feeRemark"  id="feeRemark" value="${feeRemark }">
-		</form>
+		<%--<form id = "generaPacket">--%>
+		   <%--<input type="hidden" name="payPacket"  id="payPacket" value="">--%>
+		   <%--<input type="hidden" name="feeRemark"  id="feeRemark" value="${feeRemark }">--%>
+		<%--</form>--%>
 		<form id = "wxPayForm">
 		   <input type="hidden" name="payPacket"  id="payPacket" value="">
 		   <input type="hidden" name="feeRemark"  id="feeRemark" value="${feeRemark }">
+		</form>
+		<form id="wxPayLaunch">
 		</form>
 </div>
 
@@ -88,10 +90,14 @@
 		  async:false,
 		  data:{},
 		  success:function(data){
-			  alert(data.success);
 			  if(data.success=="success"){
-				  $("#payPacket").val(data.signMsg);
-				  launchPay1();
+//				  $("#payPacket").val(data.signMsg);
+//				  launchPay1();
+//				  var msg = data.jsonStr;
+
+				  var urlAction = data.actionUrl;
+				  $("#wxPayLaunch").attr("action", urlAction);
+				  $("#wxPayLaunch").submit();
 			  }else{
 				  alert(data.errorMsg);
 			  }
@@ -107,40 +113,50 @@
 	function launchPay1(){
 		var feeRemark = $("#feeRemark").val();
 		var signStr = $("#payPacket").val();
-		var url = "";
-		var data = null;
 		$.ajax({
-			url : "http://121.31.32.100:8099/aipay_web/wxPay.do",
-			type : 'POST',
+			url : contextPath+"/launchPay",
+			type : 'GET',
 			async : false,
-			dataType:'script',
+			contentType: "application/json",
 		    data : {
 				billMsg : feeRemark,
 				requestPacket : signStr
-			}, 
+			},
 			success : function(data) {
               //这里的调用还存在一些问题
+				console.log(data);
+				if (data.success == "success") {
+					console.log(data.actionUrl);
+
+					$("#wxPayForm").attr("action", data.actionUrl);
+					$("#wxPayForm").submit();
+				} else {
+					$("#wxBtn").attr("disabled", false);
+					$("#fullChanelBtn").attr("disabled", false);
+					var errorMsg = data.errorMsg;
+					$.mask(returnMess(errorMsg));
+				}
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown) {
-				alert("error");
+
 			}
 		});
 	}
      
-    //jsonp的回调函数 
-	function callback(data){
-		alert("success but error1");
-	    if (data.success == "success") {
-			alert(data.actionUrl);
-		    $("#wxPayForm").attr("action", data.actionUrl);
-		    $("#wxPayForm").submit();
-		} else {
-			$("#wxBtn").attr("disabled", false);
-			$("#fullChanelBtn").attr("disabled", false);
-			var errorMsg = data.errorMsg;
-			$.mask(returnMess(errorMsg));
-		} 
-	}  
+//    //jsonp的回调函数
+//	function callback(data){
+//		console.log("callback:"+data);
+//	    if (data.success == "success") {
+//			alert(data.actionUrl);
+//		    $("#wxPayForm").attr("action", data.actionUrl);
+//		    $("#wxPayForm").submit();
+//		} else {
+//			$("#wxBtn").attr("disabled", false);
+//			$("#fullChanelBtn").attr("disabled", false);
+//			var errorMsg = data.errorMsg;
+//			$.mask(returnMess(errorMsg));
+//		}
+//	}
   
 </script>
 

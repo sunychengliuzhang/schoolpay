@@ -51,5 +51,25 @@ public class FormatXmlProcess {
         return sb.toString();
     }
 
+    public String formatImageXmlAnswer(String to, String from, String picurl, String url) {
+        StringBuffer sb = new StringBuffer();
+        Date date = new Date();
+        sb.append("<xml><ToUserName><![CDATA[");
+        sb.append(to);
+        sb.append("]]></ToUserName><FromUserName><![CDATA[");
+        sb.append(from);
+        sb.append("]]></FromUserName><CreateTime>");
+        sb.append(date.getTime());
+        sb.append(
+                "</CreateTime><MsgType><![CDATA[news]]>" +
+                        "</MsgType><ArticleCount>1</ArticleCount><Articles><item><Title>" +
+                        "<![CDATA[交学费]]></Title><Description><![CDATA[可以在网上交学费了啦!]]>" +
+                        "</Description><PicUrl><![CDATA[");
+        sb.append(picurl);
+        sb.append("]]></PicUrl><Url><![CDATA[" + url +
+                "]]></Url></item></Articles></xml>");
+        return sb.toString();
+    }
+
 }
 

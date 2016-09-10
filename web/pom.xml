@@ -47,6 +47,13 @@
             <artifactId>json</artifactId>
             <version>20160810</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
        <!-- -->

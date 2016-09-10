@@ -29,7 +29,7 @@ public class TulingApiProcess {
      * @param content 发送请求
      * @return
      */
-    public String getTulingResult(String content) throws IOException {
+    public org.json.JSONObject getTulingResult(String content) throws IOException {
         /** 此处为图灵api接口，采用httpPost请求进行 */
         HttpPost post = new HttpPost(URL);
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -38,15 +38,13 @@ public class TulingApiProcess {
         post.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
         HttpResponse response = new DefaultHttpClient().execute(post);
         String result = null;
+        org.json.JSONObject jsonObject = null;
         if (response.getStatusLine().getStatusCode() == 200) {//如果状态码为200,就是正常返回
             result = EntityUtils.toString(response.getEntity());
-            org.json.JSONObject jsonObject = new org.json.JSONObject(result);
+             jsonObject = new org.json.JSONObject(result);
             Object code = jsonObject.get("code").toString();
-            if ("100000".equals(code)) {
-                result = jsonObject.get("text").toString();
-            }
         }
-        return result;
+        return jsonObject;
 
     }
 
