@@ -54,9 +54,8 @@ import com.google.common.collect.Lists;
 @Controller
 public class SchoolPayAction {
 
-    private static final List<String> schools = Lists.newArrayList("亚信大学","百度大学","阿里大学","腾讯大学");
+    private static final List<String> schools = Lists.newArrayList("西点军校","加利福尼亚大学","哈佛大学","黄埔军校","清华大学","北京大学");
     public static final String HTTP_PAY_URL = "http://121.31.32.100:8099/aipay_web/wxPay.do";
-	static final String WX_PACKAGE_URL = "https://121.31.32.100:8443/aipay_web/wxPay.do";
 
     /**
      * 返回所有的学校
@@ -67,8 +66,6 @@ public class SchoolPayAction {
     @ResponseBody
     public ModelAndView weixinPay(HttpServletRequest request){
     	ModelAndView mView = new ModelAndView();
-        JSONObject jsonObject = new JSONObject();
-
     	mView.setViewName("tuitionQuery");
     	mView.addObject("schools", schools);
         return mView;
@@ -137,58 +134,7 @@ public class SchoolPayAction {
 		}
         return  jsonStr;
     }
-    
-//    @RequestMapping(value = "/queryWxTuitionPayPackage", produces = { "application/json;charset=UTF-8" })
-//	@ResponseBody
-//	public String queryWxTuitionPayPackage(HttpServletRequest request, HttpServletResponse response) {
-//
-//		org.json.JSONObject resultJson = new org.json.JSONObject();
-//		String urlStr = WX_PACKAGE_URL;
-//		String billMsg = request.getParameter("feeRemark");
-//		String requestPacket = request.getParameter("signStr");
-//
-//		PostMethod postMethod;
-//		postMethod = new PostMethod(urlStr);
-//		org.json.JSONObject jsonObj = new org.json.JSONObject();
-//		jsonObj.put("billMsg", billMsg);
-//		jsonObj.put("requestPacket", requestPacket);
-//		String body = jsonObj.toString();
-//		System.out.println("====body=====:" + body);
-//		postMethod.setRequestBody(body);
-//		org.apache.http.NameValuePair nameValuePair = new org.apache.http.NameValuePair();
-//		nameValuePair.setName("billMsg");
-//		nameValuePair.setValue(billMsg);
-//		org.apache.http.NameValuePair nameValuePair1 = new NameValuePair();
-//		nameValuePair1.setName("requestPacket");
-//		nameValuePair1.setValue(requestPacket);
-//		postMethod.addParameter(nameValuePair);
-//		postMethod.addParameter(nameValuePair1);
-//
-//		Protocol myhttps = new Protocol("https",new MySecureProtocolSocketFactory(), 443);
-//		Protocol.registerProtocol("https", myhttps);
-//        HttpClient httpClient = this.getHttpClient();
-//		try {
-//			int statusCode = httpClient.executeMethod(postMethod);
-//			// 获取服务器端返回的状态码和输入流，将输入流转换成字符串
-//			if (statusCode != HttpStatus.SC_OK) {
-//				resultJson.put("code", "-1");
-//				resultJson.put("error:", "访问失败");
-//			}else{
-//				String strResp = postMethod.getResponseBodyAsString();
-//				resultJson = JSONObject.fromObject(strResp);
-//			}
-//		} catch (HttpException e) {
-//			e.printStackTrace();
-//			resultJson.put("code", "-1");
-//			resultJson.put("error:", "访问失败");
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//			resultJson.put("code", "-1");
-//			resultJson.put("error:", "连接访问失败");
-//		}
-//		return resultJson.toString();
-//	}
-//
+
     //获取httpClient对象
     private HttpClient getHttpClient(){
     	MultiThreadedHttpConnectionManager httpConnectionManager = new MultiThreadedHttpConnectionManager();
@@ -224,7 +170,6 @@ public class SchoolPayAction {
         return result;
     }
     public static void main(String[] args) throws Exception {
-
 //        HttpPost post = new HttpPost(HTTP_PAY_URL);
 //        HttpServletRequest request = null;
 //        String requestPacket = new SchoolPayAction().generateJftPayPacket(request);

@@ -70,7 +70,7 @@
 		   <input type="hidden" name="payPacket"  id="payPacket" value="">
 		   <input type="hidden" name="feeRemark"  id="feeRemark" value="${feeRemark }">
 		</form>
-		<form id="wxPayLaunch">
+		<form id="wxPayLaunch" method="post" action="">
 		</form>
 </div>
 
