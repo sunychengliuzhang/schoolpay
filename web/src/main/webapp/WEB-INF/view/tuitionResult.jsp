@@ -16,27 +16,30 @@
 </head>
 <body>
 <div class="container">
-		<div class="page-header">
+		<div class="page-header" style="margin-top:30px">
 			<h3>
 				缴学费
-				<small>便捷支付</small>
+				<small  style="font-size: 14px;color:#BDC3C7">便捷支付</small>
 			</h3>
 		</div>
+		
+	<div class="row">
+	  <div class="col-sm-10 col-sm-offset-1">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<div class="panel panel-primary">
-			       <div class="panel-heading">支付结果: <span style="float: right">${errorMsg }</span></div>
+				<div class="panel panel-info">
+			       <div class="panel-heading" style="background-color:#1abc9c;color:#ffffff">订单信息<span style="float: right">${errorMsg }</span></div>
 			       <div class="panel-body">
 				        <ul class="list-inline">
-					        <li class="text-info">学校：</li>
+					        <li class="text-primary">学校：</li>
 					        <li>${school }</li>
 					    </ul>
 					    <ul class="list-inline">
-					        <li class="text-info">学号：</li>
+					        <li class="text-primary">学号：</li>
 					        <li>${stuNo }</li>
 					    </ul>
 					    <ul class="list-inline">
-					        <li class="text-info">学费详情：</li>
+					        <li class="text-primary">学费详情：</li>
 					        <li>${feeRemark }</li>
 					    </ul>
                    </div>
@@ -50,10 +53,14 @@
 				</div>
 			</div>
 			<div class="col-sm-10 col-sm-offset-1">
-				<button type="button" class="btn btn-info btn-lg btn-block">完成</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" onclick="back()">完成</button>
 			</div>
 		</div>
-</div>
+	</div>
+	
+	</div>
+	</div>
+		
 <!-- jQuery -->
 <script src="../js/jquery-1.11.3.js"></script>
 <!-- Bootstrap JavaScript -->
@@ -67,6 +74,10 @@
         $('select[name="searchfield"]').select2({dropdownCssClass: 'show-select-search'});
         $('select[name="inverse-dropdown-searchfield"]').select2({dropdownCssClass: 'select-inverse-dropdown show-select-search'});
       });
+      
+      function back(){
+    	  window.location.href=contextPath+"/weixinpay.do";
+      }
     </script>
 
 
