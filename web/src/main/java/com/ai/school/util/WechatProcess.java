@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class WechatProcess {
     private static final String SCHOOL_FEE = "学费";
-    private static final String PIC_URL = "http://cdn.sinacloud.net/image-001/image_school.jpg?KID=sina,19ibknuxtSIouwijakMo&Expires=1473347893&ssig=C3fzsX0mJ%2B";
+    private static final String PIC_URL = "http://cdn.sinacloud.net/image-001/%E5%BC%80%E5%AD%A6%E5%95%A6.jpg?KID=sina,19ibknuxtSIouwijakMo&Expires=1473505864&ssig=vnBW8sAAE0";
     private static final String URL = "http://sunnypay.applinzi.com/weixinpay";
     /**
      * 解析处理xml、获取智能回复结果（通过图灵机器人api接口）

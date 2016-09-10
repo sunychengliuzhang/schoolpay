@@ -67,6 +67,8 @@ public class SchoolPayAction {
     @ResponseBody
     public ModelAndView weixinPay(HttpServletRequest request){
     	ModelAndView mView = new ModelAndView();
+        JSONObject jsonObject = new JSONObject();
+
     	mView.setViewName("tuitionQuery");
     	mView.addObject("schools", schools);
         return mView;
