@@ -19,8 +19,6 @@ import java.io.*;
 @Controller
 public class WxChatAction {
 
-
-
     @RequestMapping(value = "wxSignature", produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public void wxSignature(HttpServletRequest request, HttpServletResponse response) throws IOException {

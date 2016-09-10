@@ -23,25 +23,25 @@
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
 				<div class="panel panel-primary">
-			       <div class="panel-heading">支付结果: <span style="float: right">支付成功</span></div>
+			       <div class="panel-heading">支付结果: <span style="float: right">${errorMsg }</span></div>
 			       <div class="panel-body">
 				        <ul class="list-inline">
 					        <li class="text-info">学校：</li>
-					        <li>亚信大学</li>
+					        <li>${school }</li>
 					    </ul>
 					    <ul class="list-inline">
 					        <li class="text-info">学号：</li>
-					        <li>123456</li>
+					        <li>${stuNo }</li>
 					    </ul>
 					    <ul class="list-inline">
 					        <li class="text-info">学费详情：</li>
-					        <li>Maecenas sed diam eget risus varius blandit sit</li>
+					        <li>${billMsg }</li>
 					    </ul>
                    </div>
                     <div class="panel-footer">
                 	    <div class="row">
                 	         <div class="col-sm-offset-10 col-sm-2">
-                	   	         <p>合计:3.14元</p>
+                	   	         <p>合计:${chargeAmountName }元</p>
                 	         </div>
                 	    </div>
                     </div>
