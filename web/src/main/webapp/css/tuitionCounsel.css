@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 *{ margin:0; padding:0; list-style:none;}
 img{ border:0;}
-.schoolpay{position:absolute; right:0px; top:50%; width: 150px}
+.schoolpay{position:absolute; right:0px; top:60%; width: 150px}
 .schoolpay .slide_min{margin-top: 10px; width:0px; height:80px; background:url(../images/monkey.png) no-repeat; cursor:pointer;position: absolute;right: 0px;}
 .schoolpay .slide_tip{margin-top:20px;width:auto;height:auto; overflow: hidden;position: absolute; right:0px; font-size: 12px;color: #dcbcad;padding-top: 2px}
